@@ -28,6 +28,16 @@
   .contact-prompt { background: var(--cream); border-radius: 14px; padding: 24px; margin-top: 16px; border: 1px solid var(--light-gray); }
   .contact-prompt h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
   .contact-prompt p { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+
+@media (max-width: 768px) {
+  .insurance-section { padding: 52px 20px; }
+  .insurance-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 1024px) {
+  .insurance-section { padding: 72px 32px; }
+  .insurance-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
 </style>
 </head>
 <body>
@@ -50,7 +60,22 @@
     <span class="nav-phone">(513) 310-8408</span>
     <a href="/get-started/" class="nav-cta">Get Started</a>
   </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/">Contact</a>
+  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+</div>
+
 
 <div class="inner-hero">
   <div class="inner-hero-content">

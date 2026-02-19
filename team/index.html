@@ -26,6 +26,16 @@
   .therapist-btn { display: inline-block; text-decoration: none; border: 1.5px solid var(--navy); color: var(--navy); padding: 9px 22px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: background 0.2s, color 0.2s; }
   .therapist-btn:hover { background: var(--navy); color: white; }
   .join-card { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 48px 36px; background: var(--navy); border-color: var(--navy); }
+
+@media (max-width: 768px) {
+  .team-section { padding: 52px 20px; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+  .team-section { padding: 72px 32px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 </style>
 </head>
 <body>
@@ -48,7 +58,22 @@
     <span class="nav-phone">(513) 310-8408</span>
     <a href="/get-started/" class="nav-cta">Get Started</a>
   </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/">Contact</a>
+  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+</div>
+
 
 <div class="inner-hero">
   <div class="inner-hero-content">

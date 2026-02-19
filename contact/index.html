@@ -32,6 +32,18 @@
   .c-submit { width: 100%; background: var(--teal); color: white; border: none; border-radius: 10px; padding: 15px; font-size: 15px; font-family: 'Outfit', sans-serif; font-weight: 500; cursor: pointer; transition: background 0.2s; }
   .c-submit:hover { background: var(--navy); }
   .c-disclaimer { font-size: 12px; color: var(--gray); text-align: center; margin-top: 12px; line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .contact-section { padding: 52px 20px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-form-card { padding: 24px 20px; }
+  .c-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+  .contact-section { padding: 72px 32px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
 </style>
 </head>
 <body>
@@ -54,7 +66,22 @@
     <span class="nav-phone">(513) 310-8408</span>
     <a href="/get-started/" class="nav-cta">Get Started</a>
   </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/">Contact</a>
+  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+</div>
+
 
 <div class="inner-hero">
   <div class="inner-hero-content">

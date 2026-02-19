@@ -39,6 +39,23 @@
   .step-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--sky); line-height: 1; margin-bottom: 16px; }
   .step-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
   .step-desc { font-size: 14px; line-height: 1.75; color: var(--gray); }
+
+@media (max-width: 768px) {
+  .gs-section { padding: 52px 20px; }
+  .gs-grid { grid-template-columns: 1fr; gap: 32px; }
+  .gs-form-wrap { padding: 24px 20px; }
+  .gs-row { grid-template-columns: 1fr; }
+  .hiw-steps { grid-template-columns: 1fr; gap: 12px; }
+  div[style*="padding: 60px 60px 0"] { padding: 48px 20px 0 !important; }
+  div[style*="padding-bottom:60px"] { padding-bottom: 40px !important; }
+}
+@media (max-width: 1024px) {
+  .gs-section { padding: 72px 32px; }
+  .gs-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hiw-steps { grid-template-columns: repeat(2, 1fr); }
+  div[style*="padding: 60px 60px 0"] { padding: 60px 32px 0 !important; }
+}
+
 </style>
 </head>
 <body>
@@ -61,7 +78,22 @@
     <span class="nav-phone">(513) 310-8408</span>
     <a href="/get-started/" class="nav-cta">Get Started</a>
   </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/">Contact</a>
+  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+</div>
+
 
 <div class="inner-hero">
   <div class="inner-hero-content">
