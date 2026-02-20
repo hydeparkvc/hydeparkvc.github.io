@@ -10,7 +10,7 @@
 <style>
 
 .about-body { padding: 100px 60px; background: var(--cream); }
-.about-prose { max-width: 700px; }
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 80px; align-items: start; }
 .about-mission { background: var(--navy); border-radius: 14px; padding: 24px 28px; margin-bottom: 40px; }
 .about-mission p { font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.75; font-style: italic; }
 @media (max-width: 1024px) { .about-body { padding: 72px 32px; } }
@@ -77,14 +77,16 @@
   </div>
 </div>
 <section class="about-body">
-    <div class="about-prose">
+  <div class="about-grid">
+    <div>
       <div class="eyebrow">Who We Are</div>
       <h2 class="section-h" style="margin-bottom:20px;">Accessible, personalized mental healthcare</h2>
       <p class="section-p">Hyde Park Virtual Counseling is a virtual group practice offering emotional and relationship support for adults and couples. We are licensed, trained, and experienced clinicians who provide sensitive and skilled support to those seeking an opportunity to heal and connect safely and healthily.</p>
       <p class="section-p" style="margin-top:16px;">It is hard to heal and grow when you are feeling alone and overwhelmed. We believe clients heal within a safe, connected relationship with a sensitive and skilled therapist. Through our virtual platform, we provide private and accessible care for those seeking mental health support.</p>
       <p class="section-p" style="margin-top:16px;">Our therapists possess at least 3 years and 1,000 hours of hands-on experience, and have been qualified and certified by Ohio's professional board after completing the necessary education, exams, training, and practice.</p>
     </div>
-  </section>
+  </div>
+</section>
 <section class="final-cta">
   <div class="final-cta-inner">
     <div class="eyebrow">Join Our Community</div>
