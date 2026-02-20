@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Our Team — Hyde Park Virtual Counseling</title>
+<meta name="description" content="Join the Hyde Park Virtual Counseling team. We're looking for compassionate, licensed Ohio clinicians.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .join-section { padding: 100px 60px; background: var(--cream); }
+  .join-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .join-card { background: white; border: 1px solid var(--light-gray); border-radius: 18px; padding: 32px; margin-bottom: 20px; }
+  .join-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+  .join-card p { font-size: 14px; line-height: 1.75; color: var(--gray); }
+  .join-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .join-list li { display: flex; gap: 10px; font-size: 14px; color: var(--gray); line-height: 1.6; }
+  .join-list li::before { content: "✓"; color: var(--teal); font-weight: 600; flex-shrink: 0; }
+  .join-form-wrap { background: white; border: 1px solid var(--light-gray); border-radius: 18px; padding: 36px; }
+  .join-form-wrap h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+  .join-form-wrap p { font-size: 15px; color: var(--gray); margin-bottom: 28px; line-height: 1.7; }
+  .j-input { width: 100%; background: var(--light-gray); border: 1px solid transparent; border-radius: 8px; padding: 13px 16px; font-size: 14px; font-family: 'Outfit', sans-serif; color: var(--navy); outline: none; margin-bottom: 12px; box-sizing: border-box; transition: border-color 0.2s; }
+  .j-input:focus { border-color: var(--teal); }
+  .j-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .j-textarea { width: 100%; background: var(--light-gray); border: 1px solid transparent; border-radius: 8px; padding: 13px 16px; font-size: 14px; font-family: 'Outfit', sans-serif; color: var(--navy); outline: none; margin-bottom: 12px; box-sizing: border-box; resize: vertical; min-height: 120px; transition: border-color 0.2s; }
+  .j-textarea:focus { border-color: var(--teal); }
+  .j-btn { width: 100%; background: var(--teal); color: white; border: none; border-radius: 8px; padding: 14px; font-size: 15px; font-family: 'Outfit', sans-serif; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+  .j-btn:hover { background: var(--navy); }
+  .j-disclaimer { font-size: 12px; color: var(--gray); text-align: center; margin-top: 10px; }
+  .mobile-footer { display: none; background: #111827; padding: 32px 24px; color: white; }
+  .mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+  .mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+  .mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+  .mobile-footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
+  @media (max-width: 1024px) { .join-section { padding: 72px 32px; } .join-grid { grid-template-columns: 1fr; gap: 48px; } .j-row { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) {
+    footer { display: none !important; }
+    .mobile-footer { display: block; }
+    .join-section { padding: 48px 20px !important; }
+    .join-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .j-row { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a class="nav-logo" href="/">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
+        </svg>
+      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/team/">Our Therapists</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/get-started/">How It Works</a></li>
+      <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <span class="nav-phone">(513) 310-8408</span>
+    <a href="/contact/" class="nav-cta">Get Started</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/" class="mobile-cta">Get Started →</a>
+</div>
+
+<div class="inner-hero">
+  <div class="inner-hero-content">
+    <div class="eyebrow">Join Our Team</div>
+    <h1>Grow your practice<br>with us</h1>
+    <p>We're looking for compassionate, licensed Ohio clinicians who are passionate about providing quality virtual mental health care.</p>
+  </div>
+</div>
+
+<section class="join-section">
+  <div class="join-grid">
+    <div>
+      <div class="eyebrow">Why Join Us</div>
+      <h2 class="section-h" style="margin-bottom:24px;">A practice built for clinicians</h2>
+      <div class="join-card">
+        <h3>Who We're Looking For</h3>
+        <ul class="join-list">
+          <li>Active, unrestricted Ohio licensure (LPCC, LISW, LMFT, or equivalent)</li>
+          <li>Minimum 3 years and 1,000 hours of clinical experience</li>
+          <li>Comfortable providing telehealth sessions via secure video platform</li>
+          <li>Passionate about trauma-informed, client-centered care</li>
+          <li>Reliable internet connection and private workspace</li>
+        </ul>
+      </div>
+      <div class="join-card">
+        <h3>What We Offer</h3>
+        <ul class="join-list">
+          <li>Flexible scheduling — you set your own hours</li>
+          <li>Full admin and billing support so you can focus on clients</li>
+          <li>Competitive compensation with consistent referrals</li>
+          <li>Collaborative, supportive team environment</li>
+          <li>Work from anywhere in Ohio</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="join-form-wrap">
+        <div class="eyebrow">Apply Now</div>
+        <h3>Tell us about yourself</h3>
+        <p>Fill out the form below and we'll be in touch within 2–3 business days to discuss next steps.</p>
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <div class="j-row">
+            <input class="j-input" type="text" name="first_name" placeholder="First name" required>
+            <input class="j-input" type="text" name="last_name" placeholder="Last name" required>
+          </div>
+          <input class="j-input" type="email" name="email" placeholder="Email address" required>
+          <input class="j-input" type="tel" name="phone" placeholder="Phone number">
+          <input class="j-input" type="text" name="license" placeholder="License type & number (e.g. LPCC 12345)">
+          <textarea class="j-textarea" name="message" placeholder="Tell us a bit about your clinical background, specialties, and why you're interested in joining Hyde Park Virtual Counseling..."></textarea>
+          <button type="submit" class="j-btn">Submit Application</button>
+          <p class="j-disclaimer">Your information is kept private and secure.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="eyebrow">Questions?</div>
+    <h2>Reach out directly</h2>
+    <p>Feel free to email us at Admin@hydeparkvirtual.com or call (513) 310-8408.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients all across Ohio.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
+</footer>
+
+<div class="mobile-footer">
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients all across Ohio</div>
+  <div class="mobile-footer-copy">© 2026 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
+</div>
+
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function() {
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('is-open', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('is-open');
+    });
+  });
+</script>
+
+</body>
+</html>

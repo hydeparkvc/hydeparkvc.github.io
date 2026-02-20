@@ -177,7 +177,7 @@
 .therapist-bio { font-size: 14px; line-height: 1.7; color: var(--gray); margin-bottom: 18px; }
 .therapist-btn { display: inline-block; text-decoration: none; border: 1.5px solid var(--navy); color: var(--navy); padding: 9px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: background 0.2s, color 0.2s; }
 .therapist-btn:hover { background: var(--navy); color: white; }
-.insurance { background: var(--light-gray); padding: 72px 60px; text-align: center; }
+.insurance { background: var(--light-gray); padding: 72px 60px; text-align: center; width: 100%; box-sizing: border-box; display: block; }
 .insurance-sub { font-size: 16px; color: var(--gray); margin: 12px auto 40px; max-width: 500px; }
 .insurance-logos { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
 .ins-logo { background: white; border-radius: 10px; padding: 12px 22px; font-size: 13px; font-weight: 500; color: var(--navy); opacity: 0.7; border: 1px solid rgba(27,43,75,0.08); }
@@ -226,7 +226,7 @@
   .approach-grid { grid-template-columns: 1fr; gap: 48px; }
   .therapists { padding: 80px 32px; }
   .therapist-grid { grid-template-columns: repeat(2, 1fr); }
-  .insurance { padding: 60px 32px; }
+  .insurance { padding: 60px 32px; width: 100%; }
 }
 
 /* ===== MOBILE ===== */
@@ -286,7 +286,7 @@
   </div>
   <div class="nav-right">
     <span class="nav-phone">(513) 310-8408</span>
-    <a href="/get-started/" class="nav-cta">Get Started</a>
+    <a href="/contact/" class="nav-cta">Get Started</a>
   </div>
   <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -301,8 +301,7 @@
   <a href="/services/">Services</a>
   <a href="/get-started/">How It Works</a>
   <a href="/insurance/">Insurance &amp; Fees</a>
-  <a href="/contact/">Contact</a>
-  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+  <a href="/contact/" class="mobile-cta">Get Started →</a>
 </div>
 
 <!-- HERO -->
@@ -331,7 +330,7 @@
         <option>Substance Use</option>
         <option>Something else</option>
       </select>
-      <button class="form-btn" onclick="window.location='/get-started/'">Connect with a Counselor →</button>
+      <button class="form-btn" onclick="window.location='/contact/'">Connect with a Counselor →</button>
       <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
     </div>
   </div>
@@ -396,7 +395,7 @@
     <h2>Ready to feel like<br>yourself again?</h2>
     <p>We have openings for new clients and affordable options for everyone. Reach out today.</p>
     <div class="cta-btn-group">
-      <a href="/get-started/" class="btn-white">Get Connected Today</a>
+      <a href="/contact/" class="btn-white">Get Started Today</a>
     </div>
   </div>
 </section>
