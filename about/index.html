@@ -10,13 +10,11 @@
 <style>
 
 .about-body { padding: 100px 60px; background: var(--cream); }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-.fact-row { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--light-gray); }
-.fact-row:last-child { border-bottom: none; }
-.fact-label { font-size: 13px; font-weight: 600; color: var(--navy); min-width: 160px; padding-top: 1px; }
-.fact-value { font-size: 14px; color: var(--gray); line-height: 1.7; }
-@media (max-width: 1024px) { .about-body { padding: 72px 32px; } .about-grid { grid-template-columns: 1fr; gap: 48px; } }
-@media (max-width: 768px) { .about-body { padding: 48px 20px !important; } .about-grid { grid-template-columns: 1fr !important; gap: 36px !important; } .fact-row { flex-direction: column; gap: 4px; } }
+.about-prose { max-width: 700px; }
+.about-mission { background: var(--navy); border-radius: 14px; padding: 24px 28px; margin-bottom: 40px; }
+.about-mission p { font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.75; font-style: italic; }
+@media (max-width: 1024px) { .about-body { padding: 72px 32px; } }
+@media (max-width: 768px) { .about-body { padding: 48px 20px !important; } }
 
 .mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
 .mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
@@ -82,24 +80,17 @@
   </div>
 </div>
 <section class="about-body">
-  <div class="about-grid">
-    <div>
+  <div class="about-mission">
+      <p>Hyde Park Virtual Counseling is a virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
+    </div>
+    <div class="about-prose">
       <div class="eyebrow">Who We Are</div>
       <h2 class="section-h" style="margin-bottom:20px;">Accessible, personalized mental healthcare</h2>
       <p class="section-p">Hyde Park Virtual Counseling is a virtual group practice offering emotional and relationship support for adults and couples. We are licensed, trained, and experienced clinicians who provide sensitive and skilled support to those seeking an opportunity to heal and connect safely and healthily.</p>
       <p class="section-p" style="margin-top:16px;">It is hard to heal and grow when you are feeling alone and overwhelmed. We believe clients heal within a safe, connected relationship with a sensitive and skilled therapist. Through our virtual platform, we provide private and accessible care for those seeking mental health support.</p>
       <p class="section-p" style="margin-top:16px;">Our therapists possess at least 3 years and 1,000 hours of hands-on experience, and have been qualified and certified by Ohio's professional board after completing the necessary education, exams, training, and practice.</p>
     </div>
-    <div>
-      <div class="fact-row"><div class="fact-label">Location</div><div class="fact-value">Based in Cincinnati, Ohio. Serving clients virtually across the entire state.</div></div>
-      <div class="fact-row"><div class="fact-label">Licensure</div><div class="fact-value">All therapists hold active, unrestricted Ohio licensure — LPCC, LISW, LMFT, or equivalent.</div></div>
-      <div class="fact-row"><div class="fact-label">Privacy</div><div class="fact-value">All sessions conducted via secure, encrypted, HIPAA-compliant telehealth platforms.</div></div>
-      <div class="fact-row"><div class="fact-label">Cost</div><div class="fact-value">We accept Ohio Medicaid, United, Medical Mutual, and offer affordable self-pay options.</div></div>
-      <div class="fact-row"><div class="fact-label">Availability</div><div class="fact-value">Same-week appointments — new clients typically seen within the same week of reaching out.</div></div>
-      <div class="fact-row"><div class="fact-label">Hours</div><div class="fact-value">Monday – Friday, 9:00am – 5:00pm</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 <section class="final-cta">
   <div class="final-cta-inner">
     <div class="eyebrow">Join Our Community</div>
@@ -113,10 +104,6 @@
 </section>
 <footer>
   <div class="footer-top">
-    <div>
-      <div class="f-logo">Hyde Park Virtual Counseling</div>
-      <p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p>
-    </div>
     <div>
       <div class="f-col-head">Support</div>
       <ul class="f-links">
@@ -141,14 +128,13 @@
   </div>
 </footer>
 <div class="mobile-footer">
-  <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
-  <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
   <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
+
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
