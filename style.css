@@ -283,6 +283,7 @@ footer { background: #111827; padding: 64px 60px 36px; color: white; }
 
 /* ===================== MOBILE (max 768px) ===================== */
 @media (max-width: 768px) {
+  footer { display: none !important; }
   /* Nav */
   nav { padding: 0 20px; height: 64px; }
   .nav-links { display: none; }
