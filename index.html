@@ -226,12 +226,11 @@
   /* Show mobile footer instead */
 }
 
-/* ===== HOME: hide desktop-only sections at all sizes ===== */
-.trust-bar,
-.approach,
-.therapists,
-.insurance,
-.final-cta { display: none !important; }
+
+
+
+/* ===== HOME: hide middle desktop sections everywhere ===== */
+.trust-bar, .approach, .therapists, .insurance { display: none !important; }
 
 </style>
 </head>
@@ -465,29 +464,53 @@
 <!-- DESKTOP FOOTER -->
 
 
-<!-- MOBILE FOOTER (replaces everything on mobile) -->
-<div class="site-footer">
-  <a href="tel:5133108408">(513) 310-8408</a>
-  <span>·</span>
-  <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a>
-  <span>·</span>
-  <span>Mon–Fri, 9am–5pm</span>
-  <span>·</span>
-  <span>Serving clients across Ohio</span>
-  <div class="site-footer-copy">© 2025 Hyde Park Virtual Counseling · HIPAA Compliant · Licensed in Ohio</div>
+
+
+</body>
+</html>
+
+<!-- DESKTOP FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
+</footer>
+<!-- MOBILE FOOTER -->
+<div class="mobile-footer">
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
+  <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
 
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
-
   btn.addEventListener('click', function() {
     const isOpen = menu.classList.toggle('open');
-    // Animate hamburger to X
     btn.classList.toggle('is-open', isOpen);
   });
-
-  // Close menu if user clicks a link
   menu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       menu.classList.remove('open');

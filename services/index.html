@@ -19,10 +19,12 @@
 .care-note h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
 .care-note p { font-size: 15px; line-height: 1.8; color: var(--gray); }
 @media (max-width: 1024px) { .services-section { padding: 72px 32px; } }
-@media (max-width: 768px) { .services-section { padding: 48px 20px !important; } .services-grid { grid-template-columns: 1fr !important; } }
+@media (max-width: 768px) { .services-section { padding: 48px 20px !important; } .services-grid { grid-template-columns: 1fr !important; }
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+}
 
 @media (max-width: 768px) {
-  footer { display: none !important; }
   .inner-hero { padding: 88px 20px 48px !important; }
   .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
   .inner-hero p { font-size: 15px !important; }
@@ -30,6 +32,11 @@
   .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
   .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
+.mobile-footer { display: none; background: #111827; padding: 32px 24px; color: white; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
 </style>
 </head>
 <body>
@@ -107,15 +114,41 @@
   </div>
 </section>
 
-<div class="site-footer">
-  <a href="tel:5133108408">(513) 310-8408</a>
-  <span>·</span>
-  <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a>
-  <span>·</span>
-  <span>Mon–Fri, 9am–5pm</span>
-  <span>·</span>
-  <span>Serving clients across Ohio</span>
-  <div class="site-footer-copy">© 2025 Hyde Park Virtual Counseling · HIPAA Compliant · Licensed in Ohio</div>
+
+</div>
+
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
+</footer>
+<div class="mobile-footer">
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
+  <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
 
 <script>
@@ -132,5 +165,6 @@
     });
   });
 </script>
+
 </body>
 </html>
