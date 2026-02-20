@@ -43,26 +43,34 @@
 <nav>
   <div class="nav-left">
     <a class="nav-logo" href="/">
-      <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/></svg></div>
-      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">Hyde Park</div>
+        <div class="logo-sub">Virtual Counseling</div>
+      </div>
     </a>
     <ul class="nav-links">
       <li><a href="/about/">About</a></li>
       <li><a href="/team/" class="active">Our Therapists</a></li>
       <li><a href="/services/">Services</a></li>
       <li><a href="/get-started/">How It Works</a></li>
-      <li><a href="/insurance/">Insurance & Fees</a></li>
+      <li><a href="/insurance/">Insurance &amp; Fees</a></li>
     </ul>
   </div>
   <div class="nav-right">
     <span class="nav-phone">(513) 310-8408</span>
     <a href="/get-started/" class="nav-cta">Get Started</a>
   </div>
-  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
+<!-- MOBILE MENU -->
 <div id="mobileMenu" class="nav-mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
@@ -73,7 +81,6 @@
   <a href="/contact/">Contact</a>
   <a href="/get-started/" class="mobile-cta">Get Started →</a>
 </div>
-
 
 <div class="inner-hero">
   <div class="inner-hero-content">
@@ -157,9 +164,36 @@
     <div><div class="f-logo">Hyde Park Virtual Counseling</div><p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p></div>
     <div><div class="f-col-head">Navigate</div><ul class="f-links"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Therapists</a></li><li><a href="/services/">Services</a></li></ul></div>
     <div><div class="f-col-head">Support</div><ul class="f-links"><li><a href="/get-started/">Get Started</a></li><li><a href="/insurance/">Insurance & Fees</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Join Our Team</a></li></ul></div>
-    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 10am–6pm<br>Serving clients across Ohio.</div></div>
+    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 9am–5pm<br>Serving clients across Ohio.</div></div>
   </div>
   <div class="footer-bottom"><span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span><span>HIPAA Compliant · Licensed in Ohio</span></div>
 </footer>
+
+<!-- MOBILE FOOTER -->
+<div class="mobile-footer">
+  <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
+  <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
+  <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
+</div>
+
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function() {
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('is-open', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('is-open');
+    });
+  });
+</script>
+
 </body>
 </html>
