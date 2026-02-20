@@ -183,6 +183,39 @@
 .ins-logo { background: white; border-radius: 10px; padding: 12px 22px; font-size: 13px; font-weight: 500; color: var(--navy); opacity: 0.7; border: 1px solid rgba(27,43,75,0.08); }
 
 /* ===== MOBILE FOOTER (home only) ===== */
+.mobile-footer {
+  display: none;
+  background: #111827;
+  padding: 40px 24px 32px;
+  color: white;
+}
+.mobile-footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600;
+  color: var(--light-teal);
+  margin-bottom: 10px;
+}
+.mobile-footer-mission {
+  font-size: 14px; color: rgba(255,255,255,0.45);
+  line-height: 1.75; margin-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 24px;
+}
+.mobile-footer-row {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 14px; color: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+}
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 11px; color: rgba(255,255,255,0.2);
+  text-align: center;
+  line-height: 1.8;
+}
 
 /* ===== DESKTOP RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -198,7 +231,6 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  footer { display: none !important; }
   /* Hero: full screen, single column, no right panel */
   .hero {
     grid-template-columns: 1fr;
@@ -224,14 +256,8 @@
   footer { display: none; }
 
   /* Show mobile footer instead */
+  .mobile-footer { display: block; }
 }
-
-
-
-
-/* ===== HOME: hide middle desktop sections everywhere ===== */
-.trust-bar, .approach, .therapists, .insurance { display: none !important; }
-
 </style>
 </head>
 <body>
@@ -287,7 +313,9 @@
     <p class="hero-p">Hyde Park Virtual Counseling is a small, growing private practice originating in Cincinnati, Ohio — dedicated to helping those struggling with depression, anxiety, life transitions, and relationship issues.</p>
     <div class="hero-form">
       <div class="form-title">Find your therapist today</div>
-      <input class="form-input" style="width:100%;margin-bottom:12px;" type="text" placeholder="Full name">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Full name" style="flex:1 1 100%;">
+      </div>
       <div class="form-row">
         <input class="form-input" type="tel" placeholder="Phone number">
         <input class="form-input" type="email" placeholder="Email address">
@@ -457,17 +485,10 @@
     <p>We have openings for new clients and affordable options for everyone. Reach out today.</p>
     <div class="cta-btn-group">
       <a href="/get-started/" class="btn-white">Get Connected Today</a>
+      <a href="/contact/" class="btn-outline-white">Contact Us</a>
     </div>
   </div>
 </section>
-
-<!-- DESKTOP FOOTER -->
-
-
-
-
-</body>
-</html>
 
 <!-- DESKTOP FOOTER -->
 <footer>
@@ -495,7 +516,8 @@
     <span>HIPAA Compliant · Licensed in Ohio</span>
   </div>
 </footer>
-<!-- MOBILE FOOTER -->
+
+<!-- MOBILE FOOTER (replaces everything on mobile) -->
 <div class="mobile-footer">
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
@@ -507,10 +529,14 @@
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
+
   btn.addEventListener('click', function() {
     const isOpen = menu.classList.toggle('open');
+    // Animate hamburger to X
     btn.classList.toggle('is-open', isOpen);
   });
+
+  // Close menu if user clicks a link
   menu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       menu.classList.remove('open');
