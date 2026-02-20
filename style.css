@@ -170,25 +170,7 @@ nav {
 }
 .btn-outline-white:hover { background: rgba(255,255,255,0.08); }
 
-/* Footer */
-footer { background: #111827; padding: 64px 60px 36px; color: white; }
-.footer-top {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 56px;
-  margin-bottom: 52px; padding-bottom: 52px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.f-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 12px; }
-.f-tagline { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.8; max-width: 240px; }
-.f-col-head { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 18px; }
-.f-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.f-links a { text-decoration: none; color: rgba(255,255,255,0.55); font-size: 14px; transition: color 0.2s; }
-.f-links a:hover { color: white; }
-.f-contact { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 2.1; }
-.f-contact a { color: var(--light-teal); text-decoration: none; }
-.footer-bottom {
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 12px; color: rgba(255,255,255,0.25);
-}
+
 
 /* Animations */
 @keyframes fadeInUp {
@@ -307,8 +289,40 @@ footer { background: #111827; padding: 64px 60px 36px; color: white; }
   .final-cta h2 { font-size: clamp(30px, 7vw, 44px); }
   .final-cta p { font-size: 15px; }
 
-  /* Footer */
-  footer { padding: 40px 20px 24px; }
-  .footer-top { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom { flex-direction: column; gap: 6px; text-align: center; font-size: 11px; }
+
+}
+
+/* ===================== UNIFIED FOOTER ===================== */
+.site-footer {
+  background: #111827;
+  padding: 28px 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.site-footer a {
+  color: var(--light-teal);
+  text-decoration: none;
+}
+.site-footer a:hover { color: white; }
+.site-footer span { color: rgba(255,255,255,0.4); }
+.site-footer-copy {
+  width: 100%;
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 28px 20px;
+  }
+  .site-footer span.sep { display: none; }
 }
