@@ -4,62 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Started — Hyde Park Virtual Counseling</title>
-<meta name="description" content="Connect with a virtual counselor at Hyde Park Virtual Counseling. Same-week appointments available. Ohio Medicaid accepted.">
+<meta name="description" content="Connect with a virtual counselor. Same-week appointments available.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-  .gs-section { padding: 100px 60px; background: var(--cream); }
-  .gs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .gs-form-wrap { background: white; border-radius: 20px; padding: 40px; border: 1px solid var(--light-gray); }
-  .gs-form-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-  .gs-form-sub { font-size: 14px; color: var(--gray); margin-bottom: 28px; }
-  .gs-input { width: 100%; border: 1.5px solid var(--light-gray); border-radius: 10px; padding: 13px 16px; font-size: 14px; font-family: 'Outfit', sans-serif; color: var(--navy); outline: none; transition: border-color 0.2s; background: var(--cream); margin-bottom: 12px; }
-  .gs-input:focus { border-color: var(--teal); background: white; }
-  .gs-input::placeholder { color: rgba(107,124,147,0.7); }
-  .gs-select { width: 100%; border: 1.5px solid var(--light-gray); border-radius: 10px; padding: 13px 16px; font-size: 14px; font-family: 'Outfit', sans-serif; color: var(--navy); outline: none; background: var(--cream); margin-bottom: 12px; appearance: none; }
-  .gs-select:focus { border-color: var(--teal); }
-  .gs-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .gs-submit { width: 100%; background: var(--teal); color: white; border: none; border-radius: 10px; padding: 15px; font-size: 15px; font-family: 'Outfit', sans-serif; font-weight: 500; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
-  .gs-submit:hover { background: var(--navy); }
-  .gs-disclaimer { font-size: 12px; color: var(--gray); text-align: center; margin-top: 14px; line-height: 1.6; }
-  .gs-info { display: flex; flex-direction: column; gap: 16px; }
-  .gs-info-card { background: white; border: 1px solid var(--light-gray); border-radius: 14px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; }
-  .gs-info-icon { width: 44px; height: 44px; background: var(--sky); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-  .gs-info-text h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-  .gs-info-text p { font-size: 14px; line-height: 1.65; color: var(--gray); }
-  .gs-contact-box { background: var(--navy); color: white; border-radius: 14px; padding: 26px; }
-  .gs-contact-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 22px; margin-bottom: 16px; }
-  .gs-contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 15px; color: rgba(255,255,255,0.75); }
-  .gs-contact-row a { color: var(--light-teal); text-decoration: none; }
 
-  /* How it works steps */
-  .hiw { padding: 0 60px 100px; background: var(--cream); }
-  .hiw-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
-  .hiw-step { background: white; border: 1px solid var(--light-gray); border-radius: 16px; padding: 28px 24px; }
-  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--sky); line-height: 1; margin-bottom: 16px; }
-  .step-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-  .step-desc { font-size: 14px; line-height: 1.75; color: var(--gray); }
+.hiw-top { padding: 80px 60px 0; background: white; }
+.hiw-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 36px; padding-bottom: 0; }
+.hiw-step { border: 1px solid var(--light-gray); border-radius: 18px; padding: 32px 28px; background: var(--cream); transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; }
+.hiw-step:hover { box-shadow: 0 16px 48px rgba(27,43,75,0.08); transform: translateY(-3px); border-color: var(--sky); }
+.step-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600; color: var(--sky); line-height: 1; margin-bottom: 14px; }
+.step-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.step-desc { font-size: 14px; line-height: 1.75; color: var(--gray); }
+.gs-info-section { padding: 60px 60px 100px; background: white; }
+.gs-info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 32px; }
+.gs-info-card { background: var(--cream); border: 1px solid var(--light-gray); border-radius: 18px; padding: 32px 28px; }
+.gs-info-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.gs-info-card p { font-size: 14px; line-height: 1.75; color: var(--gray); }
+.gs-contact-box { background: var(--navy); color: white; border-radius: 14px; padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.gs-contact-left h4 { font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 14px; color: white; }
+.gs-contact-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 15px; color: rgba(255,255,255,0.7); }
+.gs-contact-row a { color: var(--light-teal); text-decoration: none; }
+.gs-contact-btn { background: white; color: var(--navy); text-decoration: none; padding: 14px 30px; border-radius: 10px; font-size: 14px; font-weight: 600; white-space: nowrap; transition: opacity 0.2s; }
+.gs-contact-btn:hover { opacity: 0.85; }
+@media (max-width: 1024px) { .hiw-top { padding: 60px 32px 0; } .gs-info-section { padding: 48px 32px 72px; } .hiw-steps { grid-template-columns: repeat(2, 1fr); } .gs-contact-box { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 768px) { .hiw-top { padding: 48px 20px 0 !important; } .gs-info-section { padding: 40px 20px 60px !important; } .hiw-steps { grid-template-columns: 1fr !important; gap: 12px !important; } .gs-info-grid { grid-template-columns: 1fr !important; } }
 
+.mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
+.mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
+.mobile-footer-mission { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
 @media (max-width: 768px) {
-  .gs-section { padding: 52px 20px; }
-  .gs-grid { grid-template-columns: 1fr; gap: 32px; }
-  .gs-form-wrap { padding: 24px 20px; }
-  .gs-row { grid-template-columns: 1fr; }
-  .hiw-steps { grid-template-columns: 1fr; gap: 12px; }
-  div[style*="padding: 60px 60px 0"] { padding: 48px 20px 0 !important; }
-  div[style*="padding-bottom:60px"] { padding-bottom: 40px !important; }
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+  .inner-hero { padding: 88px 20px 48px !important; }
+  .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .inner-hero p { font-size: 15px !important; }
+  .final-cta { padding: 60px 20px !important; }
+  .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
-@media (max-width: 1024px) {
-  .gs-section { padding: 72px 32px; }
-  .gs-grid { grid-template-columns: 1fr; gap: 48px; }
-  .hiw-steps { grid-template-columns: repeat(2, 1fr); }
-  div[style*="padding: 60px 60px 0"] { padding: 60px 32px 0 !important; }
-}
-
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
     <a class="nav-logo" href="/">
@@ -68,10 +58,7 @@
           <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
         </svg>
       </div>
-      <div>
-        <div class="logo-text">Hyde Park</div>
-        <div class="logo-sub">Virtual Counseling</div>
-      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
     </a>
     <ul class="nav-links">
       <li><a href="/about/">About</a></li>
@@ -89,8 +76,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE MENU -->
 <div id="mobileMenu" class="nav-mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
@@ -101,137 +86,80 @@
   <a href="/contact/">Contact</a>
   <a href="/get-started/" class="mobile-cta">Get Started →</a>
 </div>
-
 <div class="inner-hero">
   <div class="inner-hero-content">
     <div class="eyebrow">Get Started</div>
     <h1>How it works</h1>
-    <p>Getting started is simple. Fill out the form below and we'll reach out quickly to connect you with the right counselor — usually within the same week.</p>
+    <p>Getting started is simple. Reach out and we'll connect you with the right counselor — usually within the same week.</p>
   </div>
 </div>
-
-<!-- HOW IT WORKS STEPS -->
-<div style="background:white;padding:60px 60px 0;">
+<div class="hiw-top">
   <div class="eyebrow">Simple Process</div>
   <h2 class="section-h">Four steps to feeling better</h2>
-  <div class="hiw-steps" style="margin-top:36px;padding-bottom:60px;">
-    <div class="hiw-step">
-      <div class="step-num">01</div>
-      <h3 class="step-title">Reach Out</h3>
-      <p class="step-desc">Fill out the form below or call us at (513) 310-8408. Tell us a bit about what you're looking for.</p>
-    </div>
-    <div class="hiw-step">
-      <div class="step-num">02</div>
-      <h3 class="step-title">Get Matched</h3>
-      <p class="step-desc">We pair you with a licensed counselor whose expertise, style, and availability best align with your needs.</p>
-    </div>
-    <div class="hiw-step">
-      <div class="step-num">03</div>
-      <h3 class="step-title">Book a Session</h3>
-      <p class="step-desc">Schedule at a time that works for you — same-week appointments available, Monday–Friday, 9am–5pm.</p>
-    </div>
-    <div class="hiw-step">
-      <div class="step-num">04</div>
-      <h3 class="step-title">Begin Healing</h3>
-      <p class="step-desc">Join your therapist via secure, HIPAA-compliant video. Real support, real progress — from anywhere in Ohio.</p>
-    </div>
+  <div class="hiw-steps">
+    <div class="hiw-step"><div class="step-num">01</div><h3 class="step-title">Reach Out</h3><p class="step-desc">Call us at (513) 310-8408 or fill out the contact form. Tell us a bit about what you're looking for.</p></div>
+    <div class="hiw-step"><div class="step-num">02</div><h3 class="step-title">Get Matched</h3><p class="step-desc">We pair you with a licensed counselor whose expertise, style, and availability best align with your needs.</p></div>
+    <div class="hiw-step"><div class="step-num">03</div><h3 class="step-title">Book a Session</h3><p class="step-desc">Schedule at a time that works for you — same-week appointments available, Monday–Friday, 9am–5pm.</p></div>
+    <div class="hiw-step"><div class="step-num">04</div><h3 class="step-title">Begin Healing</h3><p class="step-desc">Join your therapist via secure, HIPAA-compliant video. Real support, real progress — from anywhere in Ohio.</p></div>
   </div>
 </div>
-
-<!-- FORM SECTION -->
-<section class="gs-section">
-  <div class="gs-grid">
-    <div class="gs-form-wrap">
-      <h3 class="gs-form-title">Request a Consultation</h3>
-      <p class="gs-form-sub">Tell us a little about yourself. We'll follow up within 1–2 business days.</p>
-
-      <!-- REPLACE YOUR_FORMSPREE_ID with your actual Formspree endpoint -->
-      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <div class="gs-row">
-          <input class="gs-input" type="text" name="first_name" placeholder="First name" required>
-          <input class="gs-input" type="text" name="last_name" placeholder="Last name" required>
-        </div>
-        <input class="gs-input" type="email" name="email" placeholder="Email address" required>
-        <input class="gs-input" type="tel" name="phone" placeholder="Phone number">
-        <select class="gs-select" name="concern" required>
-          <option disabled selected value="">What brings you in?</option>
-          <option>Anxiety or Stress</option>
-          <option>Depression</option>
-          <option>Trauma or PTSD</option>
-          <option>Relationship or Couples Issues</option>
-          <option>Grief or Loss</option>
-          <option>Life Transitions</option>
-          <option>Substance Use</option>
-          <option>Something else</option>
-        </select>
-        <select class="gs-select" name="insurance">
-          <option disabled selected value="">Insurance or payment preference</option>
-          <option>Ohio Medicaid</option>
-          <option>United Health Care</option>
-          <option>Medical Mutual</option>
-          <option>Ambetter Ohio</option>
-          <option>CareSource</option>
-          <option>Anthem BCBS</option>
-          <option>EAP Plan</option>
-          <option>Self-Pay ($80/session)</option>
-          <option>Self-Pay Package ($70/session)</option>
-          <option>Not sure yet</option>
-        </select>
-        <button type="submit" class="gs-submit">Submit & Get Connected →</button>
-        <p class="gs-disclaimer">Your information is private and secure. We respond within 1–2 business days.</p>
-      </form>
+<section class="gs-info-section">
+  <div class="gs-info-grid">
+    <div class="gs-info-card"><h4>Same-Week Appointments</h4><p>Most new clients are seen within the same week of reaching out.</p></div>
+    <div class="gs-info-card"><h4>Thoughtful Matching</h4><p>We take time to understand your needs before connecting you with the right counselor.</p></div>
+    <div class="gs-info-card"><h4>Flexible Payment</h4><p>We accept Ohio Medicaid, United, Medical Mutual, EAP plans, and self-pay from $80/session.</p></div>
+    <div class="gs-info-card"><h4>Secure &amp; Confidential</h4><p>All sessions are HIPAA-compliant. Your privacy is protected at every step.</p></div>
+  </div>
+  <div class="gs-contact-box">
+    <div class="gs-contact-left">
+      <h4>Join Our Community</h4>
+      <div class="gs-contact-row">📞 &nbsp;<a href="tel:5133108408">(513) 310-8408</a></div>
+      <div class="gs-contact-row">✉️ &nbsp;<a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+      <div class="gs-contact-row">🕐 &nbsp;Mon–Fri, 9am–5pm</div>
     </div>
-
-    <div class="gs-info">
-      <div class="gs-info-card">
-        <div class="gs-info-icon">⚡</div>
-        <div class="gs-info-text">
-          <h4>Same-Week Appointments Available</h4>
-          <p>We work hard to connect new clients with a counselor quickly. Most people are seen within the same week of reaching out.</p>
-        </div>
-      </div>
-      <div class="gs-info-card">
-        <div class="gs-info-icon">🎯</div>
-        <div class="gs-info-text">
-          <h4>Thoughtful Matching</h4>
-          <p>We take time to understand your needs and match you with the counselor whose expertise, approach, and availability best fit your situation.</p>
-        </div>
-      </div>
-      <div class="gs-info-card">
-        <div class="gs-info-icon">💳</div>
-        <div class="gs-info-text">
-          <h4>Flexible Payment Options</h4>
-          <p>We accept Ohio Medicaid, United, Medical Mutual, many EAP plans, and offer self-pay at $80/session ($70 with a package of 3+).</p>
-        </div>
-      </div>
-      <div class="gs-info-card">
-        <div class="gs-info-icon">🔒</div>
-        <div class="gs-info-text">
-          <h4>Secure & Confidential</h4>
-          <p>All sessions take place via HIPAA-compliant video. Your privacy is protected at every step of the process.</p>
-        </div>
-      </div>
-      <div class="gs-contact-box">
-        <h4>Prefer to reach out directly?</h4>
-        <div class="gs-contact-row">📞 &nbsp;<a href="tel:5133108408">(513) 310-8408</a></div>
-        <div class="gs-contact-row">✉️ &nbsp;<a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
-        <div class="gs-contact-row">🕐 &nbsp;Mon–Fri, 9am–5pm</div>
-      </div>
+    <a href="/contact/" class="gs-contact-btn">Get Connected Today →</a>
+  </div>
+</section>
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="eyebrow">Join Our Community</div>
+    <h2>Start your healing<br>journey today</h2>
+    <p>We have openings for new clients and are ready to match you with the right counselor.</p>
+    <div class="cta-btn-group">
+      <a href="/get-started/" class="btn-white">Get Connected</a>
+      <a href="/contact/" class="btn-outline-white">Contact Us</a>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-top">
-    <div><div class="f-logo">Hyde Park Virtual Counseling</div><p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p></div>
-    <div><div class="f-col-head">Navigate</div><ul class="f-links"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Therapists</a></li><li><a href="/services/">Services</a></li></ul></div>
-    <div><div class="f-col-head">Support</div><ul class="f-links"><li><a href="/get-started/">Get Started</a></li><li><a href="/insurance/">Insurance & Fees</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Join Our Team</a></li></ul></div>
-    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 9am–5pm<br>Serving clients across Ohio.</div></div>
+    <div>
+      <div class="f-logo">Hyde Park Virtual Counseling</div>
+      <p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p>
+    </div>
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span><span>HIPAA Compliant · Licensed in Ohio</span></div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
 </footer>
-
-<!-- MOBILE FOOTER -->
 <div class="mobile-footer">
   <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
   <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
@@ -241,7 +169,6 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
   <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
-
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
@@ -256,6 +183,5 @@
     });
   });
 </script>
-
 </body>
 </html>

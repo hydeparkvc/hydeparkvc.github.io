@@ -4,27 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Hyde Park Virtual Counseling</title>
-<meta name="description" content="Learn about Hyde Park Virtual Counseling — a Cincinnati-based virtual therapy practice serving adults and couples across Ohio.">
+<meta name="description" content="Learn about Hyde Park Virtual Counseling.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-  .about-body { padding: 100px 60px; background: var(--cream); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .features-col { display: flex; flex-direction: column; gap: 16px; }
 
+.about-body { padding: 100px 60px; background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.fact-row { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--light-gray); }
+.fact-row:last-child { border-bottom: none; }
+.fact-label { font-size: 13px; font-weight: 600; color: var(--navy); min-width: 160px; padding-top: 1px; }
+.fact-value { font-size: 14px; color: var(--gray); line-height: 1.7; }
+@media (max-width: 1024px) { .about-body { padding: 72px 32px; } .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+@media (max-width: 768px) { .about-body { padding: 48px 20px !important; } .about-grid { grid-template-columns: 1fr !important; gap: 36px !important; } .fact-row { flex-direction: column; gap: 4px; } }
+
+.mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
+.mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
+.mobile-footer-mission { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
 @media (max-width: 768px) {
-  .about-body { padding: 52px 20px; }
-  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+  .inner-hero { padding: 88px 20px 48px !important; }
+  .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .inner-hero p { font-size: 15px !important; }
+  .final-cta { padding: 60px 20px !important; }
+  .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
-@media (max-width: 1024px) {
-  .about-body { padding: 72px 32px; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-}
-
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
     <a class="nav-logo" href="/">
@@ -33,10 +46,7 @@
           <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
         </svg>
       </div>
-      <div>
-        <div class="logo-text">Hyde Park</div>
-        <div class="logo-sub">Virtual Counseling</div>
-      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
     </a>
     <ul class="nav-links">
       <li><a href="/about/" class="active">About</a></li>
@@ -54,8 +64,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE MENU -->
 <div id="mobileMenu" class="nav-mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
@@ -66,7 +74,6 @@
   <a href="/contact/">Contact</a>
   <a href="/get-started/" class="mobile-cta">Get Started →</a>
 </div>
-
 <div class="inner-hero">
   <div class="inner-hero-content">
     <div class="eyebrow">About Us</div>
@@ -74,7 +81,6 @@
     <p>Hyde Park Virtual Counseling is a small, growing private practice originating in Cincinnati, Ohio — dedicated to helping those struggling with depression, anxiety, life transitions, and relationship issues.</p>
   </div>
 </div>
-
 <section class="about-body">
   <div class="about-grid">
     <div>
@@ -84,31 +90,16 @@
       <p class="section-p" style="margin-top:16px;">It is hard to heal and grow when you are feeling alone and overwhelmed. We believe clients heal within a safe, connected relationship with a sensitive and skilled therapist. Through our virtual platform, we provide private and accessible care for those seeking mental health support.</p>
       <p class="section-p" style="margin-top:16px;">Our therapists possess at least 3 years and 1,000 hours of hands-on experience, and have been qualified and certified by Ohio's professional board after completing the necessary education, exams, training, and practice.</p>
     </div>
-    <div class="features-col">
-      <div class="feature-item">
-        <div class="feature-icon-wrap">📍</div>
-        <div class="feature-text"><h4>Based in Cincinnati, Ohio</h4><p>A local practice serving clients virtually across the entire state of Ohio.</p></div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon-wrap">🏅</div>
-        <div class="feature-text"><h4>Ohio Licensed Clinicians</h4><p>All therapists hold active, unrestricted state licensure in Ohio — LPCC, LISW, LMFT, or equivalent.</p></div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon-wrap">🔒</div>
-        <div class="feature-text"><h4>HIPAA-Compliant & Confidential</h4><p>All sessions are conducted via secure, encrypted telehealth platforms. Your privacy is our priority.</p></div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon-wrap">💛</div>
-        <div class="feature-text"><h4>Affordable & Accessible</h4><p>We accept Ohio Medicaid, United, Medical Mutual, and offer affordable self-pay options — because everyone deserves care.</p></div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon-wrap">📅</div>
-        <div class="feature-text"><h4>Same-Week Appointments</h4><p>New clients are typically seen within the same week of reaching out.</p></div>
-      </div>
+    <div>
+      <div class="fact-row"><div class="fact-label">Location</div><div class="fact-value">Based in Cincinnati, Ohio. Serving clients virtually across the entire state.</div></div>
+      <div class="fact-row"><div class="fact-label">Licensure</div><div class="fact-value">All therapists hold active, unrestricted Ohio licensure — LPCC, LISW, LMFT, or equivalent.</div></div>
+      <div class="fact-row"><div class="fact-label">Privacy</div><div class="fact-value">All sessions conducted via secure, encrypted, HIPAA-compliant telehealth platforms.</div></div>
+      <div class="fact-row"><div class="fact-label">Cost</div><div class="fact-value">We accept Ohio Medicaid, United, Medical Mutual, and offer affordable self-pay options.</div></div>
+      <div class="fact-row"><div class="fact-label">Availability</div><div class="fact-value">Same-week appointments — new clients typically seen within the same week of reaching out.</div></div>
+      <div class="fact-row"><div class="fact-label">Hours</div><div class="fact-value">Monday – Friday, 9:00am – 5:00pm</div></div>
     </div>
   </div>
 </section>
-
 <section class="final-cta">
   <div class="final-cta-inner">
     <div class="eyebrow">Join Our Community</div>
@@ -120,18 +111,35 @@
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-top">
-    <div><div class="f-logo">Hyde Park Virtual Counseling</div><p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p></div>
-    <div><div class="f-col-head">Navigate</div><ul class="f-links"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Therapists</a></li><li><a href="/services/">Services</a></li></ul></div>
-    <div><div class="f-col-head">Support</div><ul class="f-links"><li><a href="/get-started/">Get Started</a></li><li><a href="/insurance/">Insurance & Fees</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Join Our Team</a></li></ul></div>
-    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 9am–5pm<br>Serving clients across Ohio.</div></div>
+    <div>
+      <div class="f-logo">Hyde Park Virtual Counseling</div>
+      <p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p>
+    </div>
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span><span>HIPAA Compliant · Licensed in Ohio</span></div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
 </footer>
-
-<!-- MOBILE FOOTER -->
 <div class="mobile-footer">
   <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
   <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
@@ -141,7 +149,6 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
   <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
-
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
@@ -156,6 +163,5 @@
     });
   });
 </script>
-
 </body>
 </html>

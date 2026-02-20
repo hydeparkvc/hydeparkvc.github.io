@@ -4,44 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insurance & Fees — Hyde Park Virtual Counseling</title>
-<meta name="description" content="Hyde Park Virtual Counseling accepts Ohio Medicaid, United Health Care, Medical Mutual, and more. Self-pay from $80/session.">
+<meta name="description" content="Insurance, EAP, and self-pay options.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-  .insurance-section { padding: 100px 60px; background: white; }
-  .insurance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 52px; }
-  .ins-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
-  .ins-block p { font-size: 15px; line-height: 1.8; color: var(--gray); margin-bottom: 22px; }
-  .ins-logos { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
-  .ins-logo { background: var(--light-gray); border-radius: 8px; padding: 10px 18px; font-size: 13px; font-weight: 500; color: var(--navy); }
-  .eap-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .eap-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray); }
-  .eap-list li::before { content: '✓'; color: #4A8C6F; font-weight: 600; font-size: 13px; }
-  .pricing-card { background: var(--cream); border: 1px solid var(--light-gray); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
-  .pricing-card h4 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-  .pricing-card .price { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--teal); line-height: 1; margin-bottom: 8px; }
-  .pricing-card .price-note { font-size: 13px; color: var(--gray); line-height: 1.6; }
-  .pricing-highlight { background: var(--navy); color: white; border-radius: 16px; padding: 28px; }
-  .pricing-highlight h4 { font-size: 16px; font-weight: 600; color: var(--light-teal); margin-bottom: 6px; }
-  .pricing-highlight .price { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: white; line-height: 1; margin-bottom: 8px; }
-  .pricing-highlight .price-note { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
-  .contact-prompt { background: var(--cream); border-radius: 14px; padding: 24px; margin-top: 16px; border: 1px solid var(--light-gray); }
-  .contact-prompt h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-  .contact-prompt p { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
 
+.insurance-section { padding: 100px 60px; background: white; }
+.insurance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 52px; }
+.ins-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--navy); margin-bottom: 14px; }
+.ins-block p { font-size: 15px; line-height: 1.8; color: var(--gray); margin-bottom: 22px; }
+.ins-logos { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.ins-logo { background: var(--light-gray); border-radius: 8px; padding: 10px 18px; font-size: 13px; font-weight: 500; color: var(--navy); }
+.eap-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.eap-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--gray); }
+.eap-list li::before { content: "✓"; color: #4A8C6F; font-weight: 600; font-size: 13px; }
+.pricing-card { background: var(--cream); border: 1px solid var(--light-gray); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+.pricing-card h4 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.price { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--teal); line-height: 1; margin-bottom: 8px; }
+.price-note { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.pricing-highlight { background: var(--navy); color: white; border-radius: 16px; padding: 28px; }
+.pricing-highlight h4 { font-size: 16px; font-weight: 600; color: var(--light-teal); margin-bottom: 6px; }
+.pricing-highlight .price { color: white; }
+.pricing-highlight .price-note { color: rgba(255,255,255,0.55); }
+@media (max-width: 1024px) { .insurance-section { padding: 72px 32px; } .insurance-grid { grid-template-columns: 1fr; gap: 48px; } }
+@media (max-width: 768px) { .insurance-section { padding: 48px 20px !important; } .insurance-grid { grid-template-columns: 1fr !important; gap: 36px !important; } }
+
+.mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
+.mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
+.mobile-footer-mission { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
 @media (max-width: 768px) {
-  .insurance-section { padding: 52px 20px; }
-  .insurance-grid { grid-template-columns: 1fr; gap: 40px; }
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+  .inner-hero { padding: 88px 20px 48px !important; }
+  .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .inner-hero p { font-size: 15px !important; }
+  .final-cta { padding: 60px 20px !important; }
+  .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
-@media (max-width: 1024px) {
-  .insurance-section { padding: 72px 32px; }
-  .insurance-grid { grid-template-columns: 1fr; gap: 48px; }
-}
-
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
     <a class="nav-logo" href="/">
@@ -50,10 +57,7 @@
           <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
         </svg>
       </div>
-      <div>
-        <div class="logo-text">Hyde Park</div>
-        <div class="logo-sub">Virtual Counseling</div>
-      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
     </a>
     <ul class="nav-links">
       <li><a href="/about/">About</a></li>
@@ -71,8 +75,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE MENU -->
 <div id="mobileMenu" class="nav-mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
@@ -83,24 +85,21 @@
   <a href="/contact/">Contact</a>
   <a href="/get-started/" class="mobile-cta">Get Started →</a>
 </div>
-
 <div class="inner-hero">
   <div class="inner-hero-content">
-    <div class="eyebrow">Insurance & Fees</div>
+    <div class="eyebrow">Insurance &amp; Fees</div>
     <h1>Affordable care<br>for everyone</h1>
     <p>We accept most major insurance plans and offer flexible self-pay options — because financial barriers shouldn't stand between you and mental health support.</p>
   </div>
 </div>
-
 <section class="insurance-section">
   <div class="eyebrow">Coverage Options</div>
   <h2 class="section-h">We work with your insurance</h2>
-
   <div class="insurance-grid">
     <div>
       <div class="ins-block">
         <h3>Insurance Accepted</h3>
-        <p>Many insurance plans cover mental health services with a small copay. We are currently in-network with the following plans. Please reach out to verify your specific coverage and benefits before your first session.</p>
+        <p>Many insurance plans cover mental health services with a small copay. Please reach out to verify your specific coverage before your first session.</p>
         <div class="ins-logos">
           <div class="ins-logo">Ohio Medicaid</div>
           <div class="ins-logo">United Health Care</div>
@@ -111,72 +110,74 @@
           <div class="ins-logo">Mutual of Omaha</div>
           <div class="ins-logo">Health Advocate</div>
         </div>
-        <p style="font-size:13px;color:var(--gray);font-style:italic;">Note: Assessments are billed on a case-by-case basis. Clients are entitled to a fair estimate of expected costs.</p>
+        <p style="font-size:13px;color:var(--gray);font-style:italic;">Assessments are billed on a case-by-case basis. Clients are entitled to a fair estimate of expected costs.</p>
       </div>
-
       <div class="ins-block" style="margin-top:40px;">
         <h3>EAP Partners</h3>
-        <p>Our counselors work with a variety of Employee Assistance Program (EAP) companies. Please reach out to verify if we are in-network with your employer's plan.</p>
+        <p>Our counselors work with a variety of Employee Assistance Program (EAP) companies.</p>
         <ul class="eap-list">
-          <li>SupportLinc</li>
-          <li>Curalinc</li>
-          <li>CompEAP</li>
-          <li>TriHealth</li>
-          <li>Anthem EAP</li>
-          <li>Optum EAP</li>
+          <li>SupportLinc</li><li>Curalinc</li><li>CompEAP</li>
+          <li>TriHealth</li><li>Anthem EAP</li><li>Optum EAP</li>
           <li>Comprehensive EAP</li>
         </ul>
       </div>
     </div>
-
     <div>
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:16px;">Self-Pay Options</h3>
-      <p style="font-size:15px;line-height:1.8;color:var(--gray);margin-bottom:22px;">We believe that consistent weekly counseling is the most effective path to greater healing. That's why we offer affordable options for those paying out of pocket.</p>
-
+      <p style="font-size:15px;line-height:1.8;color:var(--gray);margin-bottom:22px;">We believe consistent weekly counseling is the most effective path to greater healing. That's why we offer affordable options for those paying out of pocket.</p>
       <div class="pricing-card">
         <h4>Single Session</h4>
         <div class="price">$80</div>
-        <div class="price-note">Per 60-minute individual session. No commitment required. Pay as you go.</div>
+        <div class="price-note">Per 60-minute individual session. No commitment required.</div>
       </div>
-
       <div class="pricing-highlight">
         <h4>Session Package</h4>
         <div class="price">$70</div>
-        <div class="price-note">Per session when you purchase a package of 3 or more sessions. Same access to our counselors at a reduced rate — because we want to work with you to accomplish your goals.</div>
-      </div>
-
-      <div class="contact-prompt">
-        <h4>Have questions about coverage?</h4>
-        <p>Not sure if your plan is covered? Reach out and we'll help you figure out your options before your first appointment.</p>
-        <a href="/contact/" style="display:inline-block;background:var(--teal);color:white;text-decoration:none;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:500;">Contact Us</a>
+        <div class="price-note">Per session when you purchase a package of 3 or more. We want to work with you to accomplish your goals.</div>
       </div>
     </div>
   </div>
 </section>
-
 <section class="final-cta">
   <div class="final-cta-inner">
-    <div class="eyebrow">Let's Make It Work</div>
-    <h2>We want to work<br>with everyone</h2>
-    <p>If cost is a concern, please reach out. We're committed to finding an option that works for your situation.</p>
+    <div class="eyebrow">Join Our Community</div>
+    <h2>Start your healing<br>journey today</h2>
+    <p>We have openings for new clients and are ready to match you with the right counselor.</p>
     <div class="cta-btn-group">
       <a href="/get-started/" class="btn-white">Get Connected</a>
       <a href="/contact/" class="btn-outline-white">Contact Us</a>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-top">
-    <div><div class="f-logo">Hyde Park Virtual Counseling</div><p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p></div>
-    <div><div class="f-col-head">Navigate</div><ul class="f-links"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Therapists</a></li><li><a href="/services/">Services</a></li></ul></div>
-    <div><div class="f-col-head">Support</div><ul class="f-links"><li><a href="/get-started/">Get Started</a></li><li><a href="/insurance/">Insurance & Fees</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Join Our Team</a></li></ul></div>
-    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 9am–5pm<br>Serving clients across Ohio.</div></div>
+    <div>
+      <div class="f-logo">Hyde Park Virtual Counseling</div>
+      <p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p>
+    </div>
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span><span>HIPAA Compliant · Licensed in Ohio</span></div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
 </footer>
-
-<!-- MOBILE FOOTER -->
 <div class="mobile-footer">
   <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
   <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
@@ -186,7 +187,6 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
   <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
-
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
@@ -201,6 +201,5 @@
     });
   });
 </script>
-
 </body>
 </html>

@@ -4,42 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Therapists — Hyde Park Virtual Counseling</title>
-<meta name="description" content="Meet the licensed counselors at Hyde Park Virtual Counseling. Specializing in anxiety, trauma, couples therapy, depression, and more.">
+<meta name="description" content="Meet our licensed counselors.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-  .team-section { padding: 100px 60px; background: var(--cream); }
-  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .therapist-card { border: 1px solid var(--light-gray); border-radius: 20px; overflow: hidden; transition: box-shadow 0.3s, transform 0.3s; background: white; }
-  .therapist-card:hover { box-shadow: 0 20px 60px rgba(27,43,75,0.1); transform: translateY(-4px); }
-  .therapist-img { aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 64px; position: relative; overflow: hidden; }
-  .therapist-img img { width:100%; height:100%; object-fit:cover; position:relative; z-index:0; }
-  .therapist-img::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to top, rgba(27,43,75,0.18), transparent); z-index: 1; }
-  .specialty-tag { position: absolute; bottom: 12px; left: 12px; z-index: 2; background: white; color: var(--teal); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; }
-  .therapist-info { padding: 24px; }
-  .therapist-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
-  .therapist-cred { font-size: 13px; color: var(--teal); font-weight: 500; margin-bottom: 12px; }
-  .therapist-bio { font-size: 14px; line-height: 1.75; color: var(--gray); margin-bottom: 16px; }
-  .therapist-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .t-tag { font-size: 11px; background: var(--light-gray); color: var(--navy); padding: 4px 10px; border-radius: 20px; }
-  .insurance-note { font-size: 13px; color: var(--teal); font-weight: 500; margin-bottom: 16px; }
-  .therapist-btn { display: inline-block; text-decoration: none; border: 1.5px solid var(--navy); color: var(--navy); padding: 9px 22px; border-radius: 8px; font-size: 13px; font-weight: 500; transition: background 0.2s, color 0.2s; }
-  .therapist-btn:hover { background: var(--navy); color: white; }
-  .join-card { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 48px 36px; background: var(--navy); border-color: var(--navy); }
 
+.team-section { padding: 100px 60px; background: var(--cream); }
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 900px; }
+.therapist-card { border: 1px solid var(--light-gray); border-radius: 20px; overflow: hidden; transition: box-shadow 0.3s, transform 0.3s; background: white; }
+.therapist-card:hover { box-shadow: 0 20px 60px rgba(27,43,75,0.1); transform: translateY(-4px); }
+.therapist-img { aspect-ratio: 4/3; position: relative; overflow: hidden; background: var(--light-gray); }
+.therapist-img img { width:100%; height:100%; object-fit:cover; }
+.therapist-img::before { content:''; position:absolute; bottom:0; left:0; right:0; height:50%; background:linear-gradient(to top,rgba(27,43,75,0.18),transparent); z-index:1; }
+.specialty-tag { position:absolute; bottom:12px; left:12px; z-index:2; background:white; color:var(--teal); font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; padding:4px 12px; border-radius:20px; }
+.therapist-info { padding: 24px; }
+.therapist-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--navy); margin-bottom:3px; }
+.therapist-cred { font-size:13px; color:var(--teal); font-weight:500; margin-bottom:12px; }
+.therapist-bio { font-size:14px; line-height:1.75; color:var(--gray); margin-bottom:16px; }
+.therapist-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.t-tag { font-size:11px; background:var(--light-gray); color:var(--navy); padding:4px 10px; border-radius:20px; }
+.insurance-note { font-size:13px; color:var(--teal); font-weight:500; margin-bottom:16px; }
+.therapist-btn { display:inline-block; text-decoration:none; border:1.5px solid var(--navy); color:var(--navy); padding:9px 22px; border-radius:8px; font-size:13px; font-weight:500; transition:background 0.2s,color 0.2s; }
+.therapist-btn:hover { background:var(--navy); color:white; }
+@media (max-width: 1024px) { .team-section { padding: 72px 32px; } }
+@media (max-width: 768px) { .team-section { padding: 48px 20px !important; } .team-grid { grid-template-columns: 1fr !important; } }
+
+.mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
+.mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
+.mobile-footer-mission { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
 @media (max-width: 768px) {
-  .team-section { padding: 52px 20px; }
-  .team-grid { grid-template-columns: 1fr; }
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+  .inner-hero { padding: 88px 20px 48px !important; }
+  .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .inner-hero p { font-size: 15px !important; }
+  .final-cta { padding: 60px 20px !important; }
+  .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
-@media (max-width: 1024px) {
-  .team-section { padding: 72px 32px; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
     <a class="nav-logo" href="/">
@@ -48,10 +57,7 @@
           <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
         </svg>
       </div>
-      <div>
-        <div class="logo-text">Hyde Park</div>
-        <div class="logo-sub">Virtual Counseling</div>
-      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
     </a>
     <ul class="nav-links">
       <li><a href="/about/">About</a></li>
@@ -69,8 +75,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE MENU -->
 <div id="mobileMenu" class="nav-mobile-menu">
   <a href="/">Home</a>
   <a href="/about/">About</a>
@@ -81,7 +85,6 @@
   <a href="/contact/">Contact</a>
   <a href="/get-started/" class="mobile-cta">Get Started →</a>
 </div>
-
 <div class="inner-hero">
   <div class="inner-hero-content">
     <div class="eyebrow">Our Therapists</div>
@@ -89,12 +92,10 @@
     <p>Our licensed counselors bring years of real-world clinical experience and a genuine passion for helping people heal, grow, and thrive.</p>
   </div>
 </div>
-
 <section class="team-section">
   <div class="team-grid">
-
     <div class="therapist-card">
-      <div class="therapist-img" style="background:#D4E8F0;">
+      <div class="therapist-img">
         <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Helen Magers">
         <div class="specialty-tag">Anxiety · Grief · EMDR</div>
       </div>
@@ -103,73 +104,71 @@
         <div class="therapist-cred">LPCC — Licensed Professional Clinical Counselor</div>
         <p class="therapist-bio">Helen has over 12 years of experience providing mental health counseling to adults, adolescents, and couples. She received her bachelor's and master's degrees from Xavier University in Cincinnati.</p>
         <div class="therapist-tags">
-          <span class="t-tag">Anxiety</span>
-          <span class="t-tag">Depression</span>
-          <span class="t-tag">Grief & Loss</span>
-          <span class="t-tag">PTSD</span>
-          <span class="t-tag">EMDR Trained</span>
-          <span class="t-tag">Couples</span>
-          <span class="t-tag">Life Transitions</span>
+          <span class="t-tag">Anxiety</span><span class="t-tag">Depression</span><span class="t-tag">Grief &amp; Loss</span>
+          <span class="t-tag">PTSD</span><span class="t-tag">EMDR Trained</span><span class="t-tag">Couples</span>
         </div>
         <div class="insurance-note">In-network: United Health Care, Ambetter Ohio, CareSource, Anthem BCBS</div>
         <a href="/get-started/" class="therapist-btn">Book with Helen</a>
       </div>
     </div>
-
     <div class="therapist-card">
-      <div class="therapist-img" style="background:#E8E4F0;">
+      <div class="therapist-img">
         <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Bill">
         <div class="specialty-tag">Couples · CBT · Family</div>
       </div>
       <div class="therapist-info">
         <div class="therapist-name">Bill</div>
         <div class="therapist-cred">Licensed Therapist</div>
-        <p class="therapist-bio">Bill specializes in working with families, couples, and individuals. He has worked extensively with diverse clinical issues, including anxiety, depression, and relational issues such as trust and communication. He utilizes a cognitive behavioral approach.</p>
+        <p class="therapist-bio">Bill specializes in working with families, couples, and individuals. He has worked extensively with diverse clinical issues including anxiety, depression, and relational issues such as trust and communication.</p>
         <div class="therapist-tags">
-          <span class="t-tag">Couples Counseling</span>
-          <span class="t-tag">Family Therapy</span>
-          <span class="t-tag">Anxiety</span>
-          <span class="t-tag">Depression</span>
-          <span class="t-tag">CBT</span>
-          <span class="t-tag">Trust & Communication</span>
+          <span class="t-tag">Couples Counseling</span><span class="t-tag">Family Therapy</span>
+          <span class="t-tag">Anxiety</span><span class="t-tag">Depression</span><span class="t-tag">CBT</span>
         </div>
         <a href="/get-started/" class="therapist-btn">Book with Bill</a>
       </div>
     </div>
-
-    <div class="therapist-card join-card">
-      <div style="font-size:48px;margin-bottom:20px;">✨</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;color:white;margin-bottom:12px;">Join Our Team</h3>
-      <p style="font-size:14px;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:28px;">We're a growing practice looking for compassionate, licensed clinicians in Ohio. Flexible caseloads, competitive pay, and a supportive team environment.</p>
-      <a href="/contact/" style="background:white;color:var(--navy);text-decoration:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;">Get in Touch</a>
-    </div>
-
   </div>
 </section>
-
 <section class="final-cta">
   <div class="final-cta-inner">
-    <div class="eyebrow">Get Matched</div>
-    <h2>Find the right therapist<br>for you</h2>
-    <p>Tell us what you're looking for and we'll connect you with the counselor who's the best fit.</p>
+    <div class="eyebrow">Join Our Community</div>
+    <h2>Start your healing<br>journey today</h2>
+    <p>We have openings for new clients and are ready to match you with the right counselor.</p>
     <div class="cta-btn-group">
       <a href="/get-started/" class="btn-white">Get Connected</a>
       <a href="/contact/" class="btn-outline-white">Contact Us</a>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-top">
-    <div><div class="f-logo">Hyde Park Virtual Counseling</div><p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p></div>
-    <div><div class="f-col-head">Navigate</div><ul class="f-links"><li><a href="/">Home</a></li><li><a href="/about/">About Us</a></li><li><a href="/team/">Our Therapists</a></li><li><a href="/services/">Services</a></li></ul></div>
-    <div><div class="f-col-head">Support</div><ul class="f-links"><li><a href="/get-started/">Get Started</a></li><li><a href="/insurance/">Insurance & Fees</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Join Our Team</a></li></ul></div>
-    <div><div class="f-col-head">Contact</div><div class="f-contact"><a href="tel:5133108408">(513) 310-8408</a><br><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>Mon–Fri, 9am–5pm<br>Serving clients across Ohio.</div></div>
+    <div>
+      <div class="f-logo">Hyde Park Virtual Counseling</div>
+      <p class="f-tagline">A virtual group practice offering emotional and relationship support for adults and couples across Ohio.</p>
+    </div>
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom"><span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span><span>HIPAA Compliant · Licensed in Ohio</span></div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
 </footer>
-
-<!-- MOBILE FOOTER -->
 <div class="mobile-footer">
   <div class="mobile-footer-logo">Hyde Park Virtual Counseling</div>
   <p class="mobile-footer-mission">A virtual group practice offering emotional and relationship support for adults and couples across Ohio. Same-week appointments available.</p>
@@ -179,7 +178,6 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
   <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
-
 <script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
@@ -194,6 +192,5 @@
     });
   });
 </script>
-
 </body>
 </html>
