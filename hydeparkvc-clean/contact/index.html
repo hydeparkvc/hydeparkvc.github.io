@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Hyde Park Virtual Counseling</title>
+<meta name="description" content="Contact Hyde Park Virtual Counseling.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+
+.contact-section { padding: 100px 60px; background: var(--cream); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info-card { background: white; border-radius: 16px; padding: 24px 28px; border: 1px solid var(--light-gray); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 18px; }
+.contact-icon { width: 44px; height: 44px; background: var(--sky); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.contact-info-text h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.contact-info-text p, .contact-info-text a { font-size: 15px; color: var(--gray); line-height: 1.6; text-decoration: none; }
+.contact-info-text a:hover { color: var(--teal); }
+.crisis-box { background: var(--navy); color: white; border-radius: 14px; padding: 26px; margin-top: 6px; }
+.crisis-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; margin-bottom: 10px; }
+.crisis-box p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.75; }
+.crisis-box strong { color: white; }
+.crisis-box a { color: var(--light-teal); }
+.community-panel { background: white; border: 1px solid var(--light-gray); border-radius: 20px; padding: 40px; }
+.community-panel .eyebrow { margin-bottom: 14px; }
+.community-panel h3 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 400; color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
+.community-panel p { font-size: 15px; line-height: 1.8; color: var(--gray); margin-bottom: 28px; }
+.community-btn { display: inline-block; background: var(--teal); color: white; text-decoration: none; padding: 15px 36px; border-radius: 10px; font-size: 15px; font-weight: 500; transition: background 0.2s; margin-bottom: 16px; }
+.community-btn:hover { background: var(--navy); }
+.community-sub { font-size: 13px; color: var(--gray); }
+.community-sub a { color: var(--teal); font-weight: 500; text-decoration: none; }
+@media (max-width: 1024px) { .contact-section { padding: 72px 32px; } .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+@media (max-width: 768px) { .contact-section { padding: 48px 20px !important; } .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; } .community-panel { padding: 28px 22px; } }
+
+.mobile-footer { display: none; background: #111827; padding: 40px 24px 32px; color: white; }
+.mobile-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--light-teal); margin-bottom: 10px; }
+.mobile-footer-mission { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px; }
+.mobile-footer-row { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
+.mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
+.mobile-footer-copy { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
+@media (max-width: 768px) {
+  footer { display: none !important; }
+  .mobile-footer { display: block; }
+  .inner-hero { padding: 88px 20px 48px !important; }
+  .inner-hero h1 { font-size: clamp(30px, 8vw, 44px) !important; }
+  .inner-hero p { font-size: 15px !important; }
+  .final-cta { padding: 60px 20px !important; }
+  .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
+  .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left">
+    <a class="nav-logo" href="/">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.7C17.3 17.5 22 13.5 22 9.5C22 6.4 19.6 4 16.5 4C14.7 4 13.1 4.9 12 6.2C10.9 4.9 9.3 4 7.5 4C4.4 4 2 6.4 2 9.5C2 13.5 6.7 17.5 12 21.7Z" fill="white"/>
+        </svg>
+      </div>
+      <div><div class="logo-text">Hyde Park</div><div class="logo-sub">Virtual Counseling</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/team/">Our Therapists</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/get-started/">How It Works</a></li>
+      <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <span class="nav-phone">(513) 310-8408</span>
+    <a href="/get-started/" class="nav-cta">Get Started</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mobileMenu" class="nav-mobile-menu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/team/">Our Therapists</a>
+  <a href="/services/">Services</a>
+  <a href="/get-started/">How It Works</a>
+  <a href="/insurance/">Insurance &amp; Fees</a>
+  <a href="/contact/">Contact</a>
+  <a href="/get-started/" class="mobile-cta">Get Started →</a>
+</div>
+<div class="inner-hero">
+  <div class="inner-hero-content">
+    <div class="eyebrow">Contact</div>
+    <h1>Get in touch</h1>
+    <p>Reach out today. We have openings for new clients and affordable, accessible options for everyone.</p>
+  </div>
+</div>
+<section class="contact-section">
+  <div class="contact-grid">
+    <div>
+      <div class="eyebrow">Contact Information</div>
+      <h2 class="section-h" style="margin-bottom:28px;">We're here<br>to help</h2>
+      <div class="contact-info-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info-text"><h4>Phone</h4><a href="tel:5133108408">(513) 310-8408</a></div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info-text"><h4>Email</h4><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-info-text"><h4>Hours</h4><p>Monday – Friday, 9:00am – 5:00pm</p></div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-icon">📍</div>
+        <div class="contact-info-text"><h4>Location</h4><p>Fully virtual — serving clients across Ohio</p></div>
+      </div>
+      <div class="crisis-box">
+        <h4>Crisis Resources</h4>
+        <p>If you're in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <a href="tel:988"><strong>988</strong></a>, or text <strong>HOME</strong> to <strong>741741</strong> for the Crisis Text Line.</p>
+            </div>
+    </div>
+  </div>
+</section>
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="eyebrow">Join Our Community</div>
+    <h2>Start your healing<br>journey today</h2>
+    <p>We have openings for new clients and are ready to match you with the right counselor.</p>
+    <div class="cta-btn-group">
+      <a href="/get-started/" class="btn-white">Get Connected</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-col-head">Support</div>
+      <ul class="f-links">
+        <li><a href="/get-started/">Get Started</a></li>
+        <li><a href="/insurance/">Insurance &amp; Fees</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-head">Contact</div>
+      <div class="f-contact">
+        <a href="tel:5133108408">(513) 310-8408</a><br>
+        <a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a><br><br>
+        Mon–Fri, 9am–5pm<br>
+        Serving clients across Ohio.
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>HIPAA Compliant · Licensed in Ohio</span>
+  </div>
+</footer>
+<div class="mobile-footer">
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📞</span><a href="tel:5133108408">(513) 310-8408</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
+  <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
+  <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
+</div>
+
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function() {
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('is-open', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      menu.classList.remove('open');
+      btn.classList.remove('is-open');
+    });
+  });
+</script>
+</body>
+</html>
