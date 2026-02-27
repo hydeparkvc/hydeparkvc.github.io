@@ -313,24 +313,13 @@
     <div class="hero-form">
       <div class="form-title">Find your therapist today</div>
       <div class="form-row">
-        <input class="form-input" type="text" placeholder="Full name" style="flex:1 1 100%;">
+        <input class="form-input" id="hp_name" type="text" placeholder="Full name" style="flex:1 1 100%;">
       </div>
       <div class="form-row">
-        <input class="form-input" type="tel" placeholder="Phone number">
-        <input class="form-input" type="email" placeholder="Email address">
+        <input class="form-input" id="hp_phone" type="tel" placeholder="Phone number">
+        <input class="form-input" id="hp_email" type="email" placeholder="Email address">
       </div>
-      <select class="form-select">
-        <option disabled selected>I'm seeking help with...</option>
-        <option>Anxiety or Stress</option>
-        <option>Depression</option>
-        <option>Trauma or PTSD</option>
-        <option>Relationship Issues</option>
-        <option>Grief or Loss</option>
-        <option>Life Transitions</option>
-        <option>Substance Use</option>
-        <option>Something else</option>
-      </select>
-      <button class="form-btn" onclick="window.location='/contact/'">Connect with a Counselor →</button>
+      <button class="form-btn" onclick="openHIPAAForm()">Connect with a Counselor →</button>
       <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
     </div>
   </div>
@@ -427,6 +416,20 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients all across Ohio</div>
   <div class="mobile-footer-copy">© 2026 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
+
+
+function openHIPAAForm() {
+  var name  = document.getElementById('hp_name').value.trim();
+  var phone = document.getElementById('hp_phone').value.trim();
+  var email = document.getElementById('hp_email').value.trim();
+  var base  = 'https://hptz.io/0mbHcIA';
+  var params = [];
+  if (name)  params.push('full_name='  + encodeURIComponent(name));
+  if (phone) params.push('phone_number=' + encodeURIComponent(phone));
+  if (email) params.push('email_address=' + encodeURIComponent(email));
+  var url = params.length ? base + '?' + params.join('&') : base;
+  window.open(url, '_blank');
+}
 
 <script>
   const btn = document.getElementById('hamburgerBtn');
