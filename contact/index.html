@@ -48,6 +48,40 @@
 .mobile-footer-row a { color: var(--light-teal); text-decoration: none; }
 .mobile-footer-icon { font-size: 16px; width: 20px; flex-shrink: 0; }
 .mobile-footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; line-height: 1.8; }
+
+  .contact-form-box {
+    background: var(--navy); border-radius: 20px; padding: 36px;
+  }
+  .contact-form-box .form-title {
+    font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7);
+    letter-spacing: 0.04em; margin-bottom: 8px; text-transform: uppercase;
+  }
+  .contact-form-box h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400;
+    color: white; margin-bottom: 24px; line-height: 1.2;
+  }
+  .contact-form-box .form-row { display: flex; gap: 12px; margin-bottom: 12px; }
+  .contact-form-box .form-input {
+    flex: 1; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+    padding: 12px 16px; color: white; font-size: 14px;
+    font-family: 'Outfit', sans-serif; font-weight: 300; outline: none;
+    transition: border-color 0.2s; width: 100%;
+  }
+  .contact-form-box .form-input::placeholder { color: rgba(255,255,255,0.35); }
+  .contact-form-box .form-input:focus { border-color: var(--light-teal); }
+  .contact-form-box .form-btn {
+    width: 100%; background: var(--teal); color: white; border: none;
+    border-radius: 8px; padding: 14px; font-size: 15px;
+    font-family: 'Outfit', sans-serif; font-weight: 500; cursor: pointer;
+    transition: background 0.2s; margin-top: 4px;
+    display: block; text-align: center; text-decoration: none;
+  }
+  .contact-form-box .form-btn:hover { background: var(--light-teal); }
+  .contact-form-box .form-disclaimer {
+    font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; margin-top: 12px;
+  }
+
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-16ND1XBMXG"></script>
@@ -104,9 +138,26 @@
 </div>
 <section class="contact-section">
   <div class="contact-grid">
+
+    <!-- LEFT: Find Your Therapist form -->
+    <div class="contact-form-box">
+      <div class="form-title">Find your therapist today</div>
+      <h3>Let&#39;s find the right<br>fit for you</h3>
+      <div class="form-row">
+        <input class="form-input" id="cp_name" type="text" placeholder="Full name" style="flex:1 1 100%;">
+      </div>
+      <div class="form-row">
+        <input class="form-input" id="cp_phone" type="tel" placeholder="Phone number">
+        <input class="form-input" id="cp_email" type="email" placeholder="Email address">
+      </div>
+      <a id="contact-hipaatizer-link" href="https://hptz.io/0mbHcIA" target="_blank" class="form-btn" onclick="buildContactHIPAAUrl(this); return true;">Connect with a Counselor →</a>
+      <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
+    </div>
+
+    <!-- RIGHT: Contact info + crisis -->
     <div>
       <div class="eyebrow">Contact Information</div>
-      <h2 class="section-h" style="margin-bottom:28px;">We're here<br>to help</h2>
+      <h2 class="section-h" style="margin-bottom:28px;">We&#39;re here<br>to help</h2>
       <div class="contact-info-card">
         <div class="contact-icon">📞</div>
         <div class="contact-info-text"><h4>Phone</h4><a href="tel:5133108408">(513) 310-8408</a></div>
@@ -125,28 +176,13 @@
       </div>
       <div class="crisis-box">
         <h4>Crisis Resources</h4>
-        <p>If you're in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <a href="tel:988"><strong>988</strong></a>, or text <strong>HOME</strong> to <strong>741741</strong> for the Crisis Text Line.</p>
+        <p>If you&#39;re in crisis, contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> by calling or texting <a href="tel:988"><strong>988</strong></a>, or text <strong>HOME</strong> to <strong>741741</strong> for the Crisis Text Line.</p>
       </div>
     </div>
-    <div class="community-panel">
-      <div class="eyebrow">Join Our Community</div>
-      <h3>Start your healing<br>journey today</h3>
-      <p>We have openings for new clients and are ready to match you with the right counselor. Reach out and we'll be in touch within 1–2 business days.</p>
-      <a href="/get-started/" class="community-btn">Get Connected Today →</a><br>
-      <span class="community-sub">Or call us at <a href="tel:5133108408">(513) 310-8408</a></span>
-    </div>
+
   </div>
 </section>
-<section class="final-cta">
-  <div class="final-cta-inner">
-    <div class="eyebrow">Join Our Community</div>
-    <h2>Start your healing<br>journey today</h2>
-    <p>We have openings for new clients and are ready to match you with the right counselor.</p>
-    <div class="cta-btn-group">
-      <a href="/get-started/" class="btn-white">Get Connected</a>
-    </div>
-  </div>
-</section>
+
 
 
 </div>
@@ -173,7 +209,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Hyde Park Virtual Counseling. All rights reserved.</span>
+    <span>© 2026 Hyde Park Virtual Counseling. All rights reserved.</span>
     <span>HIPAA Compliant · Licensed in Ohio</span>
   </div>
 </footer>
@@ -182,7 +218,7 @@
   <div class="mobile-footer-row"><span class="mobile-footer-icon">✉️</span><a href="mailto:Admin@hydeparkvirtual.com">Admin@hydeparkvirtual.com</a></div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">🕐</span>Mon–Fri, 9am–5pm</div>
   <div class="mobile-footer-row"><span class="mobile-footer-icon">📍</span>Serving clients across Ohio</div>
-  <div class="mobile-footer-copy">© 2025 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
+  <div class="mobile-footer-copy">© 2026 Hyde Park Virtual Counseling<br>HIPAA Compliant · Licensed in Ohio</div>
 </div>
 
 <script>
@@ -198,6 +234,21 @@
       btn.classList.remove('is-open');
     });
   });
+</script>
+
+
+<script>
+  function buildContactHIPAAUrl(el) {
+    var name  = document.getElementById('cp_name').value.trim();
+    var phone = document.getElementById('cp_phone').value.trim();
+    var email = document.getElementById('cp_email').value.trim();
+    var base  = 'https://hptz.io/0mbHcIA';
+    var params = [];
+    if (name)  params.push('full_name='    + encodeURIComponent(name));
+    if (phone) params.push('phone_number=' + encodeURIComponent(phone));
+    if (email) params.push('email_address='+ encodeURIComponent(email));
+    el.href = params.length ? base + '?' + params.join('&') : base;
+  }
 </script>
 
 </body>
