@@ -319,7 +319,7 @@
         <input class="form-input" id="hp_phone" type="tel" placeholder="Phone number">
         <input class="form-input" id="hp_email" type="email" placeholder="Email address">
       </div>
-      <button class="form-btn" onclick="openHIPAAForm()">Connect with a Counselor →</button>
+      <a id="hipaatizer-link" href="https://hptz.io/0mbHcIA" target="_blank" class="form-btn" onclick="buildHIPAAUrl(this); return true;" style="display:block;text-align:center;text-decoration:none;">Connect with a Counselor →</a>
       <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
     </div>
   </div>
@@ -418,20 +418,18 @@
 </div>
 
 
-function openHIPAAForm() {
-  var name  = document.getElementById('hp_name').value.trim();
-  var phone = document.getElementById('hp_phone').value.trim();
-  var email = document.getElementById('hp_email').value.trim();
-  var base  = 'https://hptz.io/0mbHcIA';
-  var params = [];
-  if (name)  params.push('full_name='  + encodeURIComponent(name));
-  if (phone) params.push('phone_number=' + encodeURIComponent(phone));
-  if (email) params.push('email_address=' + encodeURIComponent(email));
-  var url = params.length ? base + '?' + params.join('&') : base;
-  window.open(url, '_blank');
-}
-
 <script>
+  function buildHIPAAUrl(el) {
+    var name  = document.getElementById('hp_name').value.trim();
+    var phone = document.getElementById('hp_phone').value.trim();
+    var email = document.getElementById('hp_email').value.trim();
+    var base  = 'https://hptz.io/0mbHcIA';
+    var params = [];
+    if (name)  params.push('full_name='  + encodeURIComponent(name));
+    if (phone) params.push('phone_number=' + encodeURIComponent(phone));
+    if (email) params.push('email_address=' + encodeURIComponent(email));
+    el.href = params.length ? base + '?' + params.join('&') : base;
+  }
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');
 
