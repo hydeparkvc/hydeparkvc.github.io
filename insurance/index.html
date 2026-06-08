@@ -46,6 +46,42 @@
   .cta-btn-group { flex-direction: column; align-items: center; gap: 12px; }
   .btn-white, .btn-outline-white { width: 100%; max-width: 300px; text-align: center; }
 }
+
+  .ins-form-box {
+    background: var(--navy); border-radius: 20px; padding: 36px;
+  }
+  .ins-form-box .form-title {
+    font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7);
+    letter-spacing: 0.04em; margin-bottom: 8px; text-transform: uppercase;
+  }
+  .ins-form-box h3 {
+    font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400;
+    color: white; margin-bottom: 16px; line-height: 1.2;
+  }
+  .ins-form-box p {
+    font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 24px;
+  }
+  .ins-form-box .form-row { display: flex; gap: 12px; margin-bottom: 12px; }
+  .ins-form-box .form-input {
+    flex: 1; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+    padding: 12px 16px; color: white; font-size: 14px;
+    font-family: 'Outfit', sans-serif; font-weight: 300; outline: none;
+    transition: border-color 0.2s; width: 100%;
+  }
+  .ins-form-box .form-input::placeholder { color: rgba(255,255,255,0.35); }
+  .ins-form-box .form-input:focus { border-color: var(--light-teal); }
+  .ins-form-box .form-btn {
+    width: 100%; background: var(--teal); color: white; border: none;
+    border-radius: 8px; padding: 14px; font-size: 15px;
+    font-family: 'Outfit', sans-serif; font-weight: 500; cursor: pointer;
+    transition: background 0.2s; margin-top: 4px;
+    display: block; text-align: center; text-decoration: none;
+  }
+  .ins-form-box .form-btn:hover { background: var(--light-teal); }
+  .ins-form-box .form-disclaimer {
+    font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; margin-top: 12px;
+  }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-16ND1XBMXG"></script>
@@ -96,7 +132,7 @@
   <div class="inner-hero-content">
     <div class="eyebrow">Insurance &amp; Fees</div>
     <h1>Affordable care<br>for everyone</h1>
-    <p>We accept most major insurance plans and offer flexible self-pay options — because financial barriers shouldn't stand between you and mental health support.</p>
+    <p>We accept many major insurance plans and offer flexible self-pay options — because financial barriers shouldn't stand between you and mental health support.</p>
   </div>
 </div>
 <section class="insurance-section">
@@ -108,10 +144,10 @@
         <h3>Insurance Accepted</h3>
         <p>Many insurance plans cover mental health services with a small copay. Please reach out to verify your specific coverage before your first session.</p>
         <div class="ins-logos">
-          <div class="ins-logo">Ohio Medicaid</div>
           <div class="ins-logo">United Health Care</div>
-          <div class="ins-logo">Ambetter Ohio</div>
+          <div class="ins-logo">Humana</div>
           <div class="ins-logo">CareSource</div>
+          <div class="ins-logo">Custom Design</div>
         </div>
         <p style="font-size:13px;color:var(--gray);font-style:italic;">Assessments are billed on a case-by-case basis. Clients are entitled to a fair estimate of expected costs.</p>
       </div>
@@ -119,26 +155,27 @@
         <h3>EAP Partners</h3>
         <p>Our counselors work with a variety of Employee Assistance Program (EAP) companies.</p>
         <ul class="eap-list">
-          <li>SupportLinc</li><li>Curalinc</li><li>CompEAP</li>
-          <li>TriHealth</li><li>Optum EAP</li>
-          <li>Comprehensive EAP</li><li>Mutual of Omaha</li><li>Health Advocate</li>
+          <li>SupportLinc</li><li>Comp EAP</li>
+          <li>Optum EAP</li><li>HealthAdvocate EAP</li>
         </ul>
       </div>
     </div>
-    <div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:16px;">Self-Pay Options</h3>
-      <p style="font-size:15px;line-height:1.8;color:var(--gray);margin-bottom:22px;">We believe consistent weekly counseling is the most effective path to greater healing. That's why we offer affordable options for those paying out of pocket.</p>
-      <div class="pricing-card">
-        <h4>Single Session</h4>
-        <div class="price">$80</div>
-        <div class="price-note">Per 60-minute individual session. No commitment required.</div>
-      </div>
-      <div class="pricing-highlight">
-        <h4>Session Package</h4>
-        <div class="price">$70</div>
-        <div class="price-note">Per session when you purchase a package of 3 or more. We want to work with you to accomplish your goals.</div>
+          <div class="ins-form-box">
+        <div class="form-title">Find your therapist today</div>
+        <h3>Let&#39;s talk about<br>your options</h3>
+        <p>We believe consistent weekly counseling is the most effective path to greater healing. That&#39;s why we offer cohesive sliding scale options tailored to meet your needs. Reach out today to discuss our flexible self-pay options.</p>
+        <div class="form-row">
+          <input class="form-input" id="ins_name" type="text" placeholder="Full name" style="flex:1 1 100%;">
+        </div>
+        <div class="form-row">
+          <input class="form-input" id="ins_phone" type="tel" placeholder="Phone number">
+          <input class="form-input" id="ins_email" type="email" placeholder="Email address">
+        </div>
+        <a id="ins-hipaatizer-link" href="https://hptz.io/0mbHcIA" target="_blank" class="form-btn" onclick="buildInsHIPAAUrl(this); return true;">Connect with a Counselor →</a>
+        <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
       </div>
     </div>
+  </div>
   </div>
 </section>
 <section class="final-cta">
@@ -147,7 +184,7 @@
     <h2>Start your healing<br>journey today</h2>
     <p>We have openings for new clients and are ready to match you with the right counselor.</p>
     <div class="cta-btn-group">
-      <a href="/contact/" class="btn-white">Get Started Today</a>
+      <a href="/contact/" class="btn-white">Get Started</a>
     </div>
   </div>
 </section>
@@ -190,6 +227,20 @@
       btn.classList.remove('is-open');
     });
   });
+</script>
+
+<script>
+  function buildInsHIPAAUrl(el) {
+    var name  = document.getElementById('ins_name').value.trim();
+    var phone = document.getElementById('ins_phone').value.trim();
+    var email = document.getElementById('ins_email').value.trim();
+    var base  = 'https://hptz.io/0mbHcIA';
+    var params = [];
+    if (name)  params.push('full_name='    + encodeURIComponent(name));
+    if (phone) params.push('phone_number=' + encodeURIComponent(phone));
+    if (email) params.push('email_address='+ encodeURIComponent(email));
+    el.href = params.length ? base + '?' + params.join('&') : base;
+  }
 </script>
 </body>
 </html>
