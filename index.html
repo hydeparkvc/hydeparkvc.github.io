@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="/images/hyde-park-logo.png?v=20260918-1">
 <link rel="apple-touch-icon" href="/images/hyde-park-logo.png?v=20260918-1">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=20260918-2">
+<link rel="stylesheet" href="/style.css?v=20260918-3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -209,7 +209,9 @@
   margin: 0 auto;
   transform: rotate(4deg);
   transform-origin: center center;
-  filter: drop-shadow(0 24px 28px rgba(0,0,0,0.28));
+  /* The Polaroid asset already contains its own edge; avoid a second
+     drop-shadow line along the bottom of the frame. */
+  filter: none;
   transition: transform 0.3s ease;
 }
 .hero-photo:hover { transform: rotate(2deg) translateY(-4px); }
