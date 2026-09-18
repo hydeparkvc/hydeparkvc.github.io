@@ -143,6 +143,16 @@
 .team-text { color: white; }
 .team-text strong { display: block; font-size: 14px; font-weight: 500; margin-bottom: 2px; }
 .team-text span { font-size: 12px; color: rgba(255,255,255,0.4); }
+.hero-photo {
+  width: min(100%, 430px);
+  margin: 0 auto;
+  transform: rotate(4deg);
+  transform-origin: center center;
+  filter: drop-shadow(0 24px 28px rgba(0,0,0,0.28));
+  transition: transform 0.3s ease;
+}
+.hero-photo:hover { transform: rotate(2deg) translateY(-4px); }
+.hero-photo img { display: block; width: 100%; height: auto; }
 
 /* ===== DESKTOP SECTIONS ===== */
 .approach { padding: 110px 60px; background: var(--cream); }
@@ -332,7 +342,11 @@
     </div>
   </div>
 
-  <div class="hero-right-panel"></div>
+  <div class="hero-right-panel">
+    <figure class="hero-photo">
+      <img src="/images/hyde-park-fountain.jpg" alt="Fountain and statue in Hyde Park, Cincinnati, Ohio">
+    </figure>
+  </div>
 
 
 <!-- INSURANCE (desktop only) -->
