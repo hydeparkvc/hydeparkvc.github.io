@@ -99,6 +99,12 @@
   transition: background 0.2s; margin-top: 4px;
 }
 .form-btn:hover { background: var(--light-teal); }
+.form-secondary {
+  display: block; margin-top: 12px; color: rgba(255,255,255,0.78);
+  text-align: center; font-size: 14px; text-decoration: none;
+  transition: color 0.2s;
+}
+.form-secondary:hover { color: var(--light-teal); }
 .form-disclaimer {
   font-size: 11px; color: rgba(255,255,255,0.3);
   text-align: center; margin-top: 12px; line-height: 1.6;
@@ -329,7 +335,7 @@
     <h1 class="hero-h1">Virtual therapy<br>that meets you <span class="highlight">where you are.</span></h1>
     <p class="hero-p">Hyde Park Virtual Counseling provides personalized online therapy for adults, adolescents, couples, and families across Ohio. Our licensed counselors offer thoughtful support for anxiety, depression, trauma, grief, life transitions, relationship concerns, and more—from the comfort of wherever you are.</p>
     <div class="hero-form">
-      <div class="form-title">Find your therapist today</div>
+      <div class="form-title">Start your intake</div>
       <div class="form-row">
         <input class="form-input" id="hp_name" type="text" placeholder="Full name" style="flex:1 1 100%;">
       </div>
@@ -337,7 +343,8 @@
         <input class="form-input" id="hp_phone" type="tel" placeholder="Phone number">
         <input class="form-input" id="hp_email" type="email" placeholder="Email address">
       </div>
-      <a id="hipaatizer-link" href="https://hptz.io/0mbHcIA" target="_blank" class="form-btn" onclick="buildHIPAAUrl(this); return true;" style="display:block;text-align:center;text-decoration:none;">Connect with a Counselor →</a>
+      <a id="hipaatizer-link" href="https://hptz.io/0mbHcIA" target="_blank" class="form-btn" onclick="buildHIPAAUrl(this); return true;" style="display:block;text-align:center;text-decoration:none;">Start Your Intake →</a>
+      <a class="form-secondary" href="tel:5133108408">Book a 15-Minute Consultation</a>
       <p class="form-disclaimer">Free initial consultation · No commitment required · HIPAA secure</p>
     </div>
   </div>
