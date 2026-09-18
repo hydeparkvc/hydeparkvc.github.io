@@ -166,7 +166,15 @@ nav {
 .btn-outline-white:hover { background: rgba(255,255,255,0.08); }
 
 /* Footer */
-footer { background: #111827; padding: 64px 60px 36px; color: white; }
+footer {
+  background: #111827;
+  padding: 64px 60px 36px;
+  color: white;
+  /* Keep the contact footer below both desktop panels even if the
+     surrounding layout is interpreted as a grid by the browser. */
+  grid-column: 1 / -1;
+  clear: both;
+}
 .footer-top {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 56px;
   margin-bottom: 52px; padding-bottom: 52px;
