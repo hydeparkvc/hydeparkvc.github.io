@@ -41,6 +41,7 @@ nav {
 .logo-mark {
   width: 38px; height: 38px;
   background: var(--teal);
+  color: var(--white);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
