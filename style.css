@@ -41,15 +41,21 @@ nav {
 .logo-mark {
   width: 38px; height: 38px;
   background: var(--teal);
-  color: var(--white);
-  font-size: 20px;
-  line-height: 1;
+  font-size: 0;
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 
-.logo-mark svg { width: 20px; height: 20px; }
+.logo-mark::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M12%2021.7C17.3%2017.5%2022%2013.5%2022%209.5C22%206.4%2019.6%204%2016.5%204C14.7%204%2013.1%204.9%2012%206.2C10.9%204.9%209.3%204%207.5%204C4.4%204%202%206.4%202%209.5C2%2013.5%206.7%2017.5%2012%2021.7Z'%20fill='white'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.logo-mark svg { display: none; }
 
 .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--navy); line-height: 1.2; }
 .logo-sub { font-size: 10px; font-weight: 400; color: var(--gray); letter-spacing: 0.06em; text-transform: uppercase; }
