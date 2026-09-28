@@ -13,7 +13,7 @@
 
 .services-section { padding: 100px 60px; background: white; }
 .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.service-card { border: 1px solid var(--light-gray); border-radius: 18px; padding: 32px 28px; transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; background: var(--cream); }
+.service-card { display:block; text-decoration:none; color:inherit; border: 1px solid var(--light-gray); border-radius: 18px; padding: 32px 28px; transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; background: var(--cream); }
 .service-card:hover { box-shadow: 0 16px 48px rgba(27,43,75,0.08); transform: translateY(-3px); border-color: var(--sky); }
 .service-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
 .service-desc { font-size: 14px; line-height: 1.75; color: var(--gray); }
@@ -98,14 +98,14 @@
   <h2 class="section-h" style="margin-bottom:12px;">We help with a wide range of concerns</h2>
   <p class="section-p" style="max-width:620px;margin-bottom:48px;">If something is getting in the way of the life you want — whether that's stress, relationships, past experiences, or just feeling off — we're here to help you work through it.</p>
   <div class="services-grid">
-    <div class="service-card"><h3 class="service-title">Anxiety &amp; Stress</h3><p class="service-desc">Whether it's generalized anxiety, panic attacks, social anxiety, or work-related stress, our therapists help you build tools to manage and reduce anxiety in your daily life.</p></div>
-    <div class="service-card"><h3 class="service-title">Depression</h3><p class="service-desc">We provide compassionate, evidence-based support for those experiencing depression — helping you reconnect with meaning, motivation, and joy.</p></div>
-    <div class="service-card"><h3 class="service-title">Trauma &amp; PTSD</h3><p class="service-desc">Our clinicians are trained in trauma-focused approaches including EMDR to help you safely process and heal from difficult experiences.</p></div>
-    <div class="service-card"><h3 class="service-title">Couples Counseling</h3><p class="service-desc">Strengthen communication, rebuild trust, and navigate conflict with the guidance of an experienced couples therapist — virtually and conveniently.</p></div>
-    <div class="service-card"><h3 class="service-title">Life Transitions</h3><p class="service-desc">Career changes, relationship shifts, loss, and major life events can be overwhelming. We help you navigate transitions with clarity and resilience.</p></div>
-    <div class="service-card"><h3 class="service-title">Grief &amp; Loss</h3><p class="service-desc">Losing someone or something important is one of life's hardest experiences. Our counselors provide a safe space to process grief at your own pace.</p></div>
-    <div class="service-card"><h3 class="service-title">Substance Use</h3><p class="service-desc">Our therapists have experience helping individuals address substance use concerns in a non-judgmental, supportive environment focused on lasting recovery.</p></div>
-    <div class="service-card"><h3 class="service-title">Self-Esteem &amp; Identity</h3><p class="service-desc">We work with clients on building a healthier relationship with themselves, improving self-worth, and developing a stronger sense of identity and purpose.</p></div>
+    <a class="service-card" href="/services/anxiety-stress/"><h3 class="service-title">Anxiety &amp; Stress</h3><p class="service-desc">Whether it's generalized anxiety, panic attacks, social anxiety, or work-related stress, our counselors help you build tools to manage and reduce anxiety in your daily life.</p></a>
+    <a class="service-card" href="/services/depression/"><h3 class="service-title">Depression</h3><p class="service-desc">We provide compassionate, evidence-based support for those experiencing depression — helping you reconnect with meaning, motivation, and joy.</p></a>
+    <a class="service-card" href="/services/trauma-ptsd/"><h3 class="service-title">Trauma &amp; PTSD</h3><p class="service-desc">Our counselors are trained in trauma-focused approaches including EMDR to help you safely process and heal from difficult experiences.</p></a>
+    <a class="service-card" href="/services/couples-counseling/"><h3 class="service-title">Couples Counseling</h3><p class="service-desc">Strengthen communication, rebuild trust, and navigate conflict with the guidance of an experienced couples counselor — virtually and conveniently.</p></a>
+    <a class="service-card" href="/services/life-transitions/"><h3 class="service-title">Life Transitions</h3><p class="service-desc">Career changes, relationship shifts, loss, and major life events can be overwhelming. We help you navigate transitions with clarity and resilience.</p></a>
+    <a class="service-card" href="/services/grief-loss/"><h3 class="service-title">Grief &amp; Loss</h3><p class="service-desc">Losing someone or something important is one of life's hardest experiences. Our counselors provide a safe space to process grief at your own pace.</p></a>
+    <a class="service-card" href="/services/substance-use/"><h3 class="service-title">Substance Use</h3><p class="service-desc">Our counselors help individuals address substance use concerns in a non-judgmental, supportive environment focused on lasting change and recovery.</p></a>
+    <a class="service-card" href="/services/self-esteem-identity/"><h3 class="service-title">Self-Esteem &amp; Identity</h3><p class="service-desc">We work with clients on building a healthier relationship with themselves, improving self-worth, and developing a stronger sense of identity and purpose.</p></a>
   </div>
   <div class="care-note">
     <div class="eyebrow">Level of Care</div>
