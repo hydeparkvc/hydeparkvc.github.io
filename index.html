@@ -294,6 +294,11 @@
   line-height: 1.8;
 }
 
+/* Hide insurance + final CTA on desktop; mobile already hides them */
+@media (min-width: 769px) {
+  .bottom-panels { display: none; }
+}
+
 /* ===== DESKTOP RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; }
@@ -414,6 +419,7 @@
       <img src="/images/hyde-park-fountain.jpg?v=20261106-1" alt="Fountain and statue in Hyde Park, Cincinnati, Ohio">
     </figure>
   </div>
+</section>
 
 
 <!-- INSURANCE + FINAL CTA (desktop only) -->
