@@ -347,6 +347,7 @@ footer {
   .f-quick-links { text-align: right; }
   .f-gap { display: none; }
   .f-contact { line-height: 2.14; }
+  section.final-cta { display: none; }
 }
 @media (max-width: 768px) {
   .f-quick-links { display: none; }
