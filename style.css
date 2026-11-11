@@ -345,7 +345,10 @@ footer {
 @media (min-width: 769px) {
   footer .footer-top { display: flex; justify-content: space-between; align-items: flex-start; }
   .f-quick-links { text-align: right; }
+  .f-gap { display: none; }
+  .f-contact { line-height: 2.14; }
 }
 @media (max-width: 768px) {
   .f-quick-links { display: none; }
+  .f-extra { display: none; }
 }
