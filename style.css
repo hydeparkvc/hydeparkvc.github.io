@@ -341,7 +341,10 @@ footer {
   .footer-bottom { flex-direction: column; gap: 6px; text-align: center; font-size: 11px; }
 }
 
-/* Desktop: center the footer contact block when it is the only column */
+/* Desktop footer: contact far left, quick links far right (mobile unchanged) */
 @media (min-width: 769px) {
-  .footer-top > div:only-child { grid-column: 1 / -1; text-align: center; }
+  footer .footer-top { display: flex; justify-content: space-between; align-items: flex-start; }
+}
+@media (max-width: 768px) {
+  .f-quick-links { display: none; }
 }
