@@ -220,6 +220,14 @@
 }
 .hero-photo:hover { transform: rotate(2deg) translateY(-4px); }
 .hero-photo img { display: block; width: 100%; height: auto; }
+/* Off-white Polaroid frame: tints only the white border, photo untouched */
+.hero-photo { position: relative; }
+.hero-photo::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: #f7f0e2; mix-blend-mode: multiply;
+  clip-path: polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0,
+    7.3% 6.65%, 7.3% 79.25%, 92.95% 79.25%, 92.95% 6.65%, 7.3% 6.65%);
+}
 
 /* ===== DESKTOP SECTIONS ===== */
 .approach { padding: 110px 60px; background: var(--cream); }
