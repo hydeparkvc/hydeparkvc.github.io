@@ -344,6 +344,7 @@ footer {
 /* Desktop footer: contact far left, quick links far right (mobile unchanged) */
 @media (min-width: 769px) {
   footer .footer-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .f-quick-links { text-align: right; }
 }
 @media (max-width: 768px) {
   .f-quick-links { display: none; }
